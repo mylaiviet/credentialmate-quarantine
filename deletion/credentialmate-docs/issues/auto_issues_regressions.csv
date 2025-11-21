@@ -1,0 +1,2 @@
+Issue ID,Severity,Title,Component,Original Issue,Regression Score,Detected At
+AUTO-2507,CRITICAL,Previously Fixed: JWT Token Expiry (Regression),api_gateway,AUTO-2401,8.9,2025-11-16T22:30:00Z

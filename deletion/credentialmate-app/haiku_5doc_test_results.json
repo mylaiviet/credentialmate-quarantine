@@ -1,0 +1,329 @@
+{
+  "model_name": "Claude 3 Haiku",
+  "model_id": "anthropic.claude-3-haiku-20240307-v1:0",
+  "overall_accuracy": 53.06122448979592,
+  "total_fields_tested": 49,
+  "total_fields_correct": 26,
+  "documents_tested": 5,
+  "field_accuracy": {
+    "provider_info.name": 100.0,
+    "provider_info.npi": 100.0,
+    "provider_info.professional_designation": 80.0,
+    "credential_details.title": 0.0,
+    "credential_details.certificate_number": 33.33333333333333,
+    "credential_details.credential_number": 100.0,
+    "credential_details.credits": 0.0,
+    "credential_details.completion_date": 66.66666666666666,
+    "credential_details.category": 0.0,
+    "credential_details.issuing_authority": 60.0,
+    "credential_details.additional_info.cme_credits": 100.0,
+    "credential_details.additional_info.cme_category": 0.0,
+    "credential_details.date_range": 0.0,
+    "credential_details.issue_date": 0.0,
+    "credential_details.expiration_date": 100.0,
+    "credential_details.status": 100.0,
+    "credential_details.jurisdiction": 100.0,
+    "credential_details.drug_schedules": 0.0,
+    "credential_details.address": 0.0,
+    "credential_details.specialty": 0.0,
+    "credential_details.certification_status": 0.0
+  },
+  "detailed_results": [
+    {
+      "data_id": "TD-001",
+      "document_type": null,
+      "accuracy": 50.0,
+      "fields_correct": 6,
+      "total_fields": 12,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "UpToDate",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "1266492503",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credential_number": {
+          "expected": "1266492503",
+          "actual": "1266492503",
+          "match": true
+        },
+        "credential_details.credits": {
+          "expected": 25.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-06-07",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "UpToDate / Wolters Kluwer",
+          "actual": "Wolters Kluwer",
+          "match": true
+        },
+        "credential_details.additional_info.cme_credits": {
+          "expected": 25.0,
+          "actual": 25.0,
+          "match": true
+        },
+        "credential_details.additional_info.cme_category": {
+          "expected": "AMA PRA Category 1",
+          "actual": "AMA PRA Category 1 Credit(s)",
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-002",
+      "document_type": null,
+      "accuracy": 44.44444444444444,
+      "fields_correct": 4,
+      "total_fields": 9,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "UpToDate",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "11017655802",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 25.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2023-07-10",
+          "actual": "2023-07-10",
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "UpToDate / Wolters Kluwer",
+          "actual": "Wolters Kluwer, UpToDate",
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-003",
+      "document_type": null,
+      "accuracy": 60.0,
+      "fields_correct": 6,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "UpToDate",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "1157731502",
+          "actual": "1157731502",
+          "match": true
+        },
+        "credential_details.credits": {
+          "expected": 10.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2024-05-29",
+          "actual": "2024-05-29",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": "May 29, 2024 - May 29, 2024",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "UpToDate / Wolters Kluwer",
+          "actual": "Wolters Kluwer",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-004",
+      "document_type": null,
+      "accuracy": 63.63636363636363,
+      "fields_correct": 7,
+      "total_fields": 11,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Tricia Huong Thi Nguyen",
+          "actual": "Tricia Huong Thi Nguyen",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MEDICAL DOCTOR",
+          "match": true
+        },
+        "credential_details.credential_number": {
+          "expected": "2500065000",
+          "actual": "2500065000",
+          "match": true
+        },
+        "credential_details.issue_date": {
+          "expected": "2025-10-28",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.expiration_date": {
+          "expected": "2026-10-31",
+          "actual": "2026-10-31",
+          "match": true
+        },
+        "credential_details.status": {
+          "expected": "active",
+          "actual": "active",
+          "match": true
+        },
+        "credential_details.jurisdiction": {
+          "expected": "Missouri",
+          "actual": "MO",
+          "match": true
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Missouri Department of Health and Senior Services - Bureau of Narcotics and Dangerous Drugs",
+          "actual": "Bureau of Narcotics and Dangerous Drugs, Missouri Department of Health and Senior Services",
+          "match": false
+        },
+        "credential_details.drug_schedules": {
+          "expected": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "actual": "2 3 4 5",
+          "match": false
+        },
+        "credential_details.address": {
+          "expected": "1000 CARONDELET DR, KANSAS CITY, MO 64114-4673",
+          "actual": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-005",
+      "document_type": null,
+      "accuracy": 42.857142857142854,
+      "fields_correct": 3,
+      "total_fields": 7,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Tricia H. Nguyen",
+          "actual": "Tricia H. Nguyen",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.title": {
+          "expected": "Diplomate of Internal Medicine",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "The American Board of Internal Medicine",
+          "actual": "The American Board of Internal Medicine",
+          "match": true
+        },
+        "credential_details.specialty": {
+          "expected": "Internal Medicine",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certification_status": {
+          "expected": "certified",
+          "actual": null,
+          "match": false
+        }
+      }
+    }
+  ],
+  "timestamp": "2025-11-19T00:48:43.312672Z"
+}

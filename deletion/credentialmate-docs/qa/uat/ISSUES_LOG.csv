@@ -1,0 +1,5 @@
+# TIMESTAMP: 2025-11-16T00:00:00Z
+# ORIGIN: credentialmate-docs
+# UPDATED_FOR: credentialmate-docs
+issue_id,created_at_utc,reported_by,environment,route,issue_type,severity,status,description,steps_to_reproduce,expected_result,actual_result,logs,sql_checks,agent_lane,repo,assigned_to,next_step,notes
+UAT-0001,2025-11-16T00:00:00Z,QA,UAT local (localhost:3000),/login,API Connectivity Issue,CRITICAL,open,Login API fails due to incorrect endpoint and CSP block; /api/v1/syse/health returns 404.,"1. Open localhost:3000/login 2. Enter credentials 3. Click Login",Login API should succeed or return a valid error message.,"Failed to fetch error; CSP violation; incorrect health endpoint.","404 /api/v1/syse/health; CSP connect-src blocked; fetch error",none,frontend,credentialmate-app,unassigned,Awaiting Phase 6 remediation,"Critical blocker; UAT cannot continue until fixed."

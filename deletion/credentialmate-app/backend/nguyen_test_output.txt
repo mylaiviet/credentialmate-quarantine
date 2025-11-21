@@ -1,0 +1,104 @@
+Unknown document type 'resident_certificate', defaulting to 'other'
+[TEST] Testing Document Parser with Tricia Nguyen Files
+================================================================================
+
+[INIT] Initializing document parser...
+[OK] Parser initialized with AWS Bedrock
+
+================================================================================
+Testing: BNDD.pdf
+================================================================================
+
+[OK] Parsing successful!
+[TIME] Processing time: 6.09 seconds
+
+[RESULTS]:
+{
+  "document_type": "control_substance",
+  "extracted_data": {
+    "state": null,
+    "registration_number": null,
+    "expiration_date": null
+  },
+  "confidence_score": 0.97,
+  "field_confidence": {},
+  "warnings": [
+    "Controlled substance parsing not fully implemented yet"
+  ]
+}
+
+[ANALYSIS]:
+Document Type: control_substance
+Overall Confidence: 97.0%
+Fields Extracted: 0/3
+
+[KEY] Key Fields:
+
+[WARN] Warnings:
+  - Controlled substance parsing not fully implemented yet
+
+================================================================================
+Testing: Nguyen certificate UTHSC.pdf
+================================================================================
+
+[OK] Parsing successful!
+[TIME] Processing time: 5.57 seconds
+
+[RESULTS]:
+{
+  "document_type": "other",
+  "extracted_data": {},
+  "confidence_score": 0.95,
+  "field_confidence": {},
+  "warnings": [
+    "Unknown document type - could not extract structured data"
+  ]
+}
+
+[ANALYSIS]:
+Document Type: other
+Overall Confidence: 95.0%
+Fields Extracted: 0/0
+
+[KEY] Key Fields:
+
+[WARN] Warnings:
+  - Unknown document type - could not extract structured data
+
+================================================================================
+Testing: Tricia Drivers License Mo exp 2031.pdf
+================================================================================
+
+[OK] Parsing successful!
+[TIME] Processing time: 3.57 seconds
+
+[RESULTS]:
+{
+  "document_type": "other",
+  "extracted_data": {},
+  "confidence_score": 0.95,
+  "field_confidence": {},
+  "warnings": [
+    "Unknown document type - could not extract structured data"
+  ]
+}
+
+[ANALYSIS]:
+Document Type: other
+Overall Confidence: 95.0%
+Fields Extracted: 0/0
+
+[KEY] Key Fields:
+
+[WARN] Warnings:
+  - Unknown document type - could not extract structured data
+
+================================================================================
+[SUMMARY]
+================================================================================
+Total Tests: 3
+Passed: 3
+Failed: 0
+Success Rate: 100.0%
+
+[OK] All tests passed!

@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-003",
+  "file_path": "backend/uploads/2025/11/20251113_9be2def0_certificate-1157731502 (1).pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T10:10:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.95
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Michael Hilliard",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "UpToDate",
+      "certificate_number": "1157731502",
+      "credits": 10.0,
+      "completion_date": "2024-05-29",
+      "date_range": "May 29, 2024 - May 29, 2024",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "UpToDate / Wolters Kluwer"
+    }
+  },
+  "notes": "UpToDate CME certificate - 10 credits completed on May 29, 2024. Certificate number 1157731502."
+}

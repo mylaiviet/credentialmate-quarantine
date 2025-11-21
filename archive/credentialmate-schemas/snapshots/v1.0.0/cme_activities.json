@@ -1,0 +1,125 @@
+{
+  "_comment_timestamp": "TIMESTAMP: 2025-11-15T00:00:00Z",
+  "_comment_origin": "ORIGIN: credentialmate-schemas",
+  "_comment_purpose": "PURPOSE: CME activity schema snapshot - Phase 1 scaffolding only",
+
+  "schema_version": "1.0.0",
+  "phase": "1-scaffolding",
+  "status": "placeholder",
+
+  "table_name": "cme_activities",
+  "description": "CME activity schema snapshot for version 1.0.0",
+
+  "fields": [
+    {
+      "name": "id",
+      "type": "UUID",
+      "nullable": false,
+      "primary_key": true,
+      "description": "Unique CME activity identifier"
+    },
+    {
+      "name": "user_id",
+      "type": "UUID",
+      "nullable": false,
+      "foreign_key": "users.id",
+      "description": "Reference to user who completed this activity"
+    },
+    {
+      "name": "activity_title",
+      "type": "TEXT",
+      "nullable": false,
+      "description": "Title of CME activity"
+    },
+    {
+      "name": "provider_name",
+      "type": "VARCHAR(255)",
+      "nullable": true,
+      "description": "CME provider organization name"
+    },
+    {
+      "name": "credits_earned",
+      "type": "DECIMAL(5,2)",
+      "nullable": false,
+      "description": "Number of CME credits earned"
+    },
+    {
+      "name": "category",
+      "type": "ENUM('CATEGORY_1', 'CATEGORY_2', 'AMA_PRA', 'OTHER')",
+      "nullable": false,
+      "description": "CME credit category"
+    },
+    {
+      "name": "completion_date",
+      "type": "DATE",
+      "nullable": false,
+      "description": "Activity completion date"
+    },
+    {
+      "name": "applicable_states",
+      "type": "JSONB",
+      "nullable": true,
+      "description": "Array of state codes where credits apply"
+    },
+    {
+      "name": "topics",
+      "type": "JSONB",
+      "nullable": true,
+      "description": "Array of topic tags (e.g., ethics, pain management)"
+    },
+    {
+      "name": "document_id",
+      "type": "UUID",
+      "nullable": true,
+      "foreign_key": "documents.id",
+      "description": "Reference to uploaded certificate document"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "nullable": false,
+      "default": "CURRENT_TIMESTAMP",
+      "description": "Record creation timestamp"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "nullable": false,
+      "default": "CURRENT_TIMESTAMP",
+      "description": "Last update timestamp"
+    }
+  ],
+
+  "indexes": [
+    {
+      "name": "idx_cme_user_id",
+      "columns": ["user_id"],
+      "type": "btree"
+    },
+    {
+      "name": "idx_cme_completion_date",
+      "columns": ["completion_date"],
+      "type": "btree"
+    },
+    {
+      "name": "idx_cme_category",
+      "columns": ["category"],
+      "type": "btree"
+    }
+  ],
+
+  "constraints": [
+    {
+      "type": "check",
+      "name": "ck_cme_credits_positive",
+      "expression": "credits_earned > 0"
+    }
+  ],
+
+  "phase_2_requirements": [
+    "Add state-specific CME requirement mappings",
+    "Add compliance calculation triggers",
+    "Add accreditation validation",
+    "Add topic requirement tracking"
+  ]
+}

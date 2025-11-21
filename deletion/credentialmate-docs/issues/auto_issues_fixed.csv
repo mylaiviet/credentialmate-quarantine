@@ -1,0 +1,4 @@
+Issue ID,Severity,Title,Component,Fix Time (min),Commit,Fixed At
+AUTO-2506,HIGH,Unvalidated Redirect in OAuth Callback,backend/auth,45,a1b2c3d4,2025-11-16T23:30:00Z
+AUTO-2503,HIGH,Memory Leak in Document Parser,backend/services/parser,120,e5f6g7h8,2025-11-16T23:45:00Z
+AUTO-2505,CRITICAL,XSS Vulnerability in Admin Dashboard Search,frontend/components/admin,30,i9j0k1l2,2025-11-16T23:25:00Z

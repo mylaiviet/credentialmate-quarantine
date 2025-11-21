@@ -1,0 +1,119 @@
+AWS Bedrock error [ThrottlingException]: Too many requests, please wait before trying again.
+Sonnet escalation failed: AWS Bedrock error: Too many requests, please wait before trying again., using Haiku result
+Field Extraction Accuracy Test
+============================================================
+Mode: Real AWS Bedrock API (use_mock=False)
+============================================================
+
+Loaded 21 approved test documents
+
+[1/21] Testing TD-001 (cme)...
+  OK Field accuracy: 40.0% (4/10 fields correct)
+
+[2/21] Testing TD-002 (cme)...
+  OK Field accuracy: 44.4% (4/9 fields correct)
+
+[3/21] Testing TD-003 (cme)...
+  OK Field accuracy: 60.0% (6/10 fields correct)
+
+[4/21] Testing TD-004 (controlled_substance)...
+  OK Field accuracy: 33.3% (4/12 fields correct)
+
+[5/21] Testing TD-005 (board_certification)...
+  OK Field accuracy: 42.9% (3/7 fields correct)
+
+[6/21] Testing TD-006 (diploma)...
+  OK Field accuracy: 50.0% (3/6 fields correct)
+
+[7/21] Testing TD-009 (cme)...
+  OK Field accuracy: 25.0% (1/4 fields correct)
+
+[8/21] Testing TD-010 (cme)...
+  OK Field accuracy: 50.0% (2/4 fields correct)
+
+[9/21] Testing TD-011 (cme)...
+  OK Field accuracy: 40.0% (4/10 fields correct)
+
+[10/21] Testing TD-012 (cme)...
+  OK Field accuracy: 10.0% (1/10 fields correct)
+
+[11/21] Testing TD-013 (cme)...
+  OK Field accuracy: 40.0% (4/10 fields correct)
+
+[12/21] Testing TD-014 (cme)...
+  OK Field accuracy: 60.0% (6/10 fields correct)
+
+[13/21] Testing TD-015 (cme)...
+  OK Field accuracy: 40.0% (4/10 fields correct)
+
+[14/21] Testing TD-016 (cme)...
+  OK Field accuracy: 50.0% (5/10 fields correct)
+
+[15/21] Testing TD-017 (cme)...
+  OK Field accuracy: 57.1% (4/7 fields correct)
+
+[16/21] Testing TD-018 (cme)...
+  OK Field accuracy: 42.9% (3/7 fields correct)
+
+[17/21] Testing TD-019 (cme)...
+  OK Field accuracy: 50.0% (5/10 fields correct)
+
+[18/21] Testing TD-020 (cme)...
+  OK Field accuracy: 40.0% (4/10 fields correct)
+
+[19/21] Testing TD-021 (other)...
+  OK Field accuracy: 57.1% (4/7 fields correct)
+
+[20/21] Testing TD-022 (dea)...
+  OK Field accuracy: 45.5% (5/11 fields correct)
+
+[21/21] Testing TD-023 (other)...
+  SKIP: No expected_extraction in ground truth (document type: other)
+
+============================================================
+FIELD EXTRACTION ACCURACY SUMMARY
+============================================================
+
+Overall Field Accuracy: 43.9%
+   Target: 90.0%
+   Status: BELOW TARGET (-46.1 pp)
+
+Accuracy by Document Type:
+  [LOW] board_certification: 42.9% (n=1)
+  [LOW] cme: 43.3% (n=15)
+  [LOW] controlled_substance: 33.3% (n=1)
+  [LOW] dea: 45.5% (n=1)
+  [LOW] diploma: 50.0% (n=1)
+  [LOW] other: 57.1% (n=1)
+
+Accuracy by Field:
+  [LOW] credential_details.title: 0.0% (0/15)
+  [LOW] credential_details.category: 0.0% (0/12)
+  [LOW] credential_details.registration_number: 0.0% (0/2)
+  [LOW] credential_details.license_number: 0.0% (0/1)
+  [LOW] credential_details.state: 0.0% (0/1)
+  [LOW] credential_details.drug_schedules: 0.0% (0/1)
+  [LOW] credential_details.address: 0.0% (0/2)
+  [LOW] credential_details.specialty: 0.0% (0/1)
+  [LOW] credential_details.certification_status: 0.0% (0/1)
+  [LOW] credential_details.degree: 0.0% (0/1)
+  [LOW] credential_details.program_type: 0.0% (0/1)
+  [LOW] credential_details.schedules: 0.0% (0/1)
+  [LOW] credential_details.activity: 0.0% (0/1)
+  [LOW] credential_details.fee_paid: 0.0% (0/1)
+  [LOW] credential_details.completion_date: 14.3% (2/14)
+  [LOW] provider_info.name: 30.0% (6/20)
+  [LOW] credential_details.credits: 45.5% (5/11)
+  [LOW] credential_details.issue_date: 50.0% (1/2)
+  [LOW] credential_details.date_range: 60.0% (6/10)
+  [LOW] provider_info.professional_designation: 61.1% (11/18)
+  [LOW] credential_details.issuing_authority: 70.0% (14/20)
+  [LOW] credential_details.certificate_number: 71.4% (10/14)
+  [OK] provider_info.npi: 85.0% (17/20)
+  [OK] credential_details.expiration_date: 100.0% (2/2)
+  [OK] credential_details.status: 100.0% (1/1)
+  [OK] credential_details.graduation_year: 100.0% (1/1)
+
+Results saved to: C:\CREDENTIALMATE-REBUILD\credentialmate\credentialmate-app\docs\ux-ui\outputs\SESSION-1-4-FIELD-EXTRACTION-RESULTS.json
+
+WARNING: Field extraction accuracy 43.9% below 90% target

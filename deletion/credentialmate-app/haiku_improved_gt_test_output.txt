@@ -1,0 +1,4 @@
+  File "C:\CREDENTIALMATE-REBUILD\credentialmate\credentialmate-app\backend\test_haiku_with_improved_gt.py", line 192
+    print(f"  Hybrid 70/30: ${:.0f}/month (64% savings)")
+                                                        ^
+SyntaxError: f-string: empty expression not allowed

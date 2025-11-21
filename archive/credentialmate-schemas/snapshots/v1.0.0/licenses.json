@@ -1,0 +1,120 @@
+{
+  "_comment_timestamp": "TIMESTAMP: 2025-11-15T00:00:00Z",
+  "_comment_origin": "ORIGIN: credentialmate-schemas",
+  "_comment_purpose": "PURPOSE: License schema snapshot - Phase 1 scaffolding only",
+
+  "schema_version": "1.0.0",
+  "phase": "1-scaffolding",
+  "status": "placeholder",
+
+  "table_name": "licenses",
+  "description": "Medical license schema snapshot for version 1.0.0",
+
+  "fields": [
+    {
+      "name": "id",
+      "type": "UUID",
+      "nullable": false,
+      "primary_key": true,
+      "description": "Unique license identifier"
+    },
+    {
+      "name": "user_id",
+      "type": "UUID",
+      "nullable": false,
+      "foreign_key": "users.id",
+      "description": "Reference to user who owns this license"
+    },
+    {
+      "name": "license_type",
+      "type": "ENUM('MEDICAL_LICENSE', 'DEA', 'CSR', 'BOARD_CERTIFICATION')",
+      "nullable": false,
+      "description": "Type of license"
+    },
+    {
+      "name": "license_number",
+      "type": "VARCHAR(50)",
+      "nullable": false,
+      "description": "License number (encrypted)"
+    },
+    {
+      "name": "state",
+      "type": "VARCHAR(2)",
+      "nullable": false,
+      "description": "Issuing state (US state code)"
+    },
+    {
+      "name": "issue_date",
+      "type": "DATE",
+      "nullable": true,
+      "description": "License issue date"
+    },
+    {
+      "name": "expiration_date",
+      "type": "DATE",
+      "nullable": false,
+      "description": "License expiration date"
+    },
+    {
+      "name": "status",
+      "type": "ENUM('ACTIVE', 'EXPIRED', 'PENDING', 'REVOKED')",
+      "nullable": false,
+      "default": "PENDING",
+      "description": "License status"
+    },
+    {
+      "name": "document_id",
+      "type": "UUID",
+      "nullable": true,
+      "foreign_key": "documents.id",
+      "description": "Reference to uploaded document"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "nullable": false,
+      "default": "CURRENT_TIMESTAMP",
+      "description": "Record creation timestamp"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "nullable": false,
+      "default": "CURRENT_TIMESTAMP",
+      "description": "Last update timestamp"
+    }
+  ],
+
+  "indexes": [
+    {
+      "name": "idx_licenses_user_id",
+      "columns": ["user_id"],
+      "type": "btree"
+    },
+    {
+      "name": "idx_licenses_expiration",
+      "columns": ["expiration_date"],
+      "type": "btree"
+    },
+    {
+      "name": "idx_licenses_state_type",
+      "columns": ["state", "license_type"],
+      "type": "btree"
+    }
+  ],
+
+  "constraints": [
+    {
+      "type": "check",
+      "name": "ck_licenses_expiration_future",
+      "expression": "expiration_date >= issue_date"
+    }
+  ],
+
+  "phase_2_requirements": [
+    "Add complete state validation rules",
+    "Add encryption key references",
+    "Add compliance tracking fields",
+    "Add renewal notification triggers"
+  ]
+}

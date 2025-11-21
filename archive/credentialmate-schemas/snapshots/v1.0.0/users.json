@@ -1,0 +1,96 @@
+{
+  "_comment_timestamp": "TIMESTAMP: 2025-11-15T00:00:00Z",
+  "_comment_origin": "ORIGIN: credentialmate-schemas",
+  "_comment_purpose": "PURPOSE: User schema snapshot - Phase 1 scaffolding only",
+
+  "schema_version": "1.0.0",
+  "phase": "1-scaffolding",
+  "status": "placeholder",
+
+  "table_name": "users",
+  "description": "User account schema snapshot for version 1.0.0",
+
+  "fields": [
+    {
+      "name": "id",
+      "type": "UUID",
+      "nullable": false,
+      "primary_key": true,
+      "description": "Unique user identifier"
+    },
+    {
+      "name": "email",
+      "type": "VARCHAR(255)",
+      "nullable": false,
+      "unique": true,
+      "description": "User email address (encrypted)"
+    },
+    {
+      "name": "full_name",
+      "type": "VARCHAR(255)",
+      "nullable": false,
+      "description": "User full name (encrypted)"
+    },
+    {
+      "name": "role",
+      "type": "ENUM('PROVIDER', 'ADMIN', 'DELEGATE')",
+      "nullable": false,
+      "description": "User role type"
+    },
+    {
+      "name": "specialty",
+      "type": "VARCHAR(100)",
+      "nullable": true,
+      "description": "Provider specialty (if applicable)"
+    },
+    {
+      "name": "is_active",
+      "type": "BOOLEAN",
+      "nullable": false,
+      "default": true,
+      "description": "Account active status"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "nullable": false,
+      "default": "CURRENT_TIMESTAMP",
+      "description": "Account creation timestamp"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "nullable": false,
+      "default": "CURRENT_TIMESTAMP",
+      "description": "Last update timestamp"
+    }
+  ],
+
+  "indexes": [
+    {
+      "name": "idx_users_email",
+      "columns": ["email"],
+      "type": "unique"
+    },
+    {
+      "name": "idx_users_role",
+      "columns": ["role"],
+      "type": "btree"
+    }
+  ],
+
+  "constraints": [
+    {
+      "type": "check",
+      "name": "ck_users_email_format",
+      "expression": "email ~ '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}$'"
+    }
+  ],
+
+  "phase_2_requirements": [
+    "Add complete field validation rules",
+    "Add encryption key references",
+    "Add audit logging schema",
+    "Add HIPAA compliance annotations"
+  ]
+}

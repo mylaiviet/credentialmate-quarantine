@@ -1,0 +1,413 @@
+{
+  "_soc2_metadata": {
+    "timestamp": "2025-11-20T00:00:00Z",
+    "classification": "SOC2 Type II - Infrastructure Configuration",
+    "compliance": "HIPAA technical safeguards, SOC2 infrastructure controls",
+    "origin": "credentialmate-infra",
+    "purpose": "AI Build Orchestrator configuration for HIPAA-compliant credentialing platform"
+  },
+  "project": "CredentialMate",
+  "version": "1.0.0",
+  "orchestration_mode": "csv",
+  "created_at": "2025-11-08",
+  "description": "AI Build Orchestrator configuration for CredentialMate HIPAA-compliant credentialing platform",
+  "directories": {
+    "orchestration": ".orchestration",
+    "governance": "governance",
+    "operations": "operations",
+    "data": "data",
+    "infra": "infra",
+    "docs": "docs",
+    "scripts": "scripts",
+    "modules": "modules",
+    "backend": "backend",
+    "frontend": "frontend"
+  },
+  "csv_schemas": {
+    "PROJECT_PLAN.csv": {
+      "description": "Master task tracking and project plan",
+      "location": ".orchestration/PROJECT_PLAN.csv",
+      "required_columns": [
+        "Task_ID",
+        "Task_Name",
+        "Description",
+        "Agent",
+        "Status",
+        "Priority",
+        "Dependencies",
+        "Module",
+        "Estimated_Hours",
+        "Created_At",
+        "Updated_At",
+        "Owner"
+      ],
+      "column_types": {
+        "Task_ID": "string",
+        "Task_Name": "string",
+        "Description": "text",
+        "Agent": "enum",
+        "Status": "enum",
+        "Priority": "enum",
+        "Dependencies": "string",
+        "Module": "string",
+        "Estimated_Hours": "float",
+        "Created_At": "timestamp",
+        "Updated_At": "timestamp",
+        "Owner": "string"
+      },
+      "enums": {
+        "Agent": [
+          "Claude Code",
+          "Cursor AI",
+          "ChatGPT Codex",
+          "TBD",
+          "Unassigned"
+        ],
+        "Status": [
+          "Backlog",
+          "In Progress",
+          "Blocked",
+          "Completed",
+          "Cancelled"
+        ],
+        "Priority": [
+          "Critical",
+          "High",
+          "Medium",
+          "Low"
+        ]
+      },
+      "validations": {
+        "Task_ID": "^[A-Z]+-\\d+$",
+        "Estimated_Hours": ">=0"
+      },
+      "append_only": true
+    },
+    "TASK_LOG.csv": {
+      "description": "Append-only log of all task state changes",
+      "location": ".orchestration/TASK_LOG.csv",
+      "required_columns": [
+        "Log_ID",
+        "Timestamp",
+        "Task_ID",
+        "Agent",
+        "Action",
+        "Old_Status",
+        "New_Status",
+        "Notes",
+        "Files_Modified"
+      ],
+      "column_types": {
+        "Log_ID": "integer",
+        "Timestamp": "timestamp",
+        "Task_ID": "string",
+        "Agent": "string",
+        "Action": "enum",
+        "Old_Status": "string",
+        "New_Status": "string",
+        "Notes": "text",
+        "Files_Modified": "text"
+      },
+      "enums": {
+        "Action": [
+          "Created",
+          "Locked",
+          "Updated",
+          "Blocked",
+          "Unblocked",
+          "Completed",
+          "Cancelled"
+        ]
+      },
+      "append_only": true
+    },
+    "ISSUES_LOG.csv": {
+      "description": "Log of all issues encountered and resolutions",
+      "location": ".orchestration/ISSUES_LOG.csv",
+      "required_columns": [
+        "Issue_ID",
+        "Title",
+        "Date",
+        "Agent",
+        "Module",
+        "Severity",
+        "Status",
+        "Time_To_Resolve",
+        "Symptoms",
+        "Root_Cause",
+        "Solution",
+        "Prevention_Strategy",
+        "Hash"
+      ],
+      "column_types": {
+        "Issue_ID": "string",
+        "Title": "string",
+        "Date": "timestamp",
+        "Agent": "string",
+        "Module": "string",
+        "Severity": "enum",
+        "Status": "enum",
+        "Time_To_Resolve": "string",
+        "Symptoms": "text",
+        "Root_Cause": "text",
+        "Solution": "text",
+        "Prevention_Strategy": "text",
+        "Hash": "string"
+      },
+      "enums": {
+        "Severity": [
+          "Critical",
+          "High",
+          "Medium",
+          "Low"
+        ],
+        "Status": [
+          "Open",
+          "In Progress",
+          "Resolved",
+          "Archived"
+        ]
+      },
+      "validations": {
+        "Issue_ID": "^ISSUE-\\d+$",
+        "Hash": "^[a-f0-9]{8}$"
+      },
+      "append_only": true
+    },
+    "CHANGES_LOG.csv": {
+      "description": "Log of all code changes made by AI agents",
+      "location": ".orchestration/CHANGES_LOG.csv",
+      "required_columns": [
+        "Change_ID",
+        "Timestamp",
+        "Agent",
+        "Title",
+        "Modules",
+        "Status",
+        "Related",
+        "Context",
+        "Changes_Made",
+        "Files_Modified",
+        "Testing",
+        "Hash"
+      ],
+      "column_types": {
+        "Change_ID": "string",
+        "Timestamp": "timestamp",
+        "Agent": "string",
+        "Title": "string",
+        "Modules": "string",
+        "Status": "enum",
+        "Related": "string",
+        "Context": "text",
+        "Changes_Made": "text",
+        "Files_Modified": "text",
+        "Testing": "text",
+        "Hash": "string"
+      },
+      "enums": {
+        "Status": [
+          "In Progress",
+          "Completed",
+          "Rolled Back"
+        ]
+      },
+      "validations": {
+        "Change_ID": "^CHG-\\d{4}$",
+        "Hash": "^[a-f0-9]{8}$"
+      },
+      "append_only": true
+    },
+    "KNOWLEDGE_BASE.csv": {
+      "description": "Repository of lessons learned and patterns discovered",
+      "location": ".orchestration/KNOWLEDGE_BASE.csv",
+      "required_columns": [
+        "KB_ID",
+        "Title",
+        "Category",
+        "Tags",
+        "Agent",
+        "Date",
+        "Lesson",
+        "Details",
+        "Hash"
+      ],
+      "column_types": {
+        "KB_ID": "string",
+        "Title": "string",
+        "Category": "string",
+        "Tags": "string",
+        "Agent": "string",
+        "Date": "timestamp",
+        "Lesson": "text",
+        "Details": "text",
+        "Hash": "string"
+      },
+      "validations": {
+        "KB_ID": "^KB-\\d{3}$",
+        "Hash": "^[a-f0-9]{8}$"
+      },
+      "append_only": true
+    },
+    "STATE_MAPPING.csv": {
+      "description": "State-specific CME and license requirements",
+      "location": "data/STATE_MAPPING.csv",
+      "required_columns": [
+        "State_Abbreviation",
+        "State_Name",
+        "License_Type",
+        "CME_Required",
+        "CME_Hours",
+        "Cycle_Length_Years",
+        "Special_Requirements",
+        "Verification_URL",
+        "Last_Updated"
+      ],
+      "column_types": {
+        "State_Abbreviation": "string",
+        "State_Name": "string",
+        "License_Type": "string",
+        "CME_Required": "boolean",
+        "CME_Hours": "integer",
+        "Cycle_Length_Years": "integer",
+        "Special_Requirements": "text",
+        "Verification_URL": "string",
+        "Last_Updated": "timestamp"
+      },
+      "validations": {
+        "State_Abbreviation": "^[A-Z]{2}$",
+        "CME_Hours": ">=0",
+        "Cycle_Length_Years": ">0"
+      }
+    },
+    "STATE_EXCEPTIONS.csv": {
+      "description": "State-specific exceptions and edge cases",
+      "location": "data/STATE_EXCEPTIONS.csv",
+      "required_columns": [
+        "Exception_ID",
+        "State_Abbreviation",
+        "License_Type",
+        "Exception_Type",
+        "Description",
+        "Effective_Date",
+        "Expiration_Date",
+        "Source_URL"
+      ],
+      "column_types": {
+        "Exception_ID": "string",
+        "State_Abbreviation": "string",
+        "License_Type": "string",
+        "Exception_Type": "string",
+        "Description": "text",
+        "Effective_Date": "date",
+        "Expiration_Date": "date",
+        "Source_URL": "string"
+      },
+      "validations": {
+        "Exception_ID": "^EXC-\\d{4}$",
+        "State_Abbreviation": "^[A-Z]{2}$"
+      }
+    },
+    "ACCESS_LOG.csv": {
+      "description": "Audit log of all file access by AI agents",
+      "location": ".orchestration/ACCESS_LOG.csv",
+      "required_columns": [
+        "Log_ID",
+        "Timestamp",
+        "Session_ID",
+        "Agent_ID",
+        "File_Accessed",
+        "Action",
+        "Success",
+        "Notes"
+      ],
+      "column_types": {
+        "Log_ID": "integer",
+        "Timestamp": "timestamp",
+        "Session_ID": "string",
+        "Agent_ID": "string",
+        "File_Accessed": "string",
+        "Action": "enum",
+        "Success": "boolean",
+        "Notes": "text"
+      },
+      "enums": {
+        "Action": [
+          "Read",
+          "Write",
+          "Edit",
+          "Delete",
+          "Create"
+        ]
+      },
+      "append_only": true
+    }
+  },
+  "guardrails": {
+    "max_lock_time_hours": 4,
+    "max_task_age_days": 7,
+    "confidence_threshold": 0.9,
+    "max_consecutive_failures": 3,
+    "required_docs": [
+      "TASKS.md",
+      "PROJECT_PLAN.csv",
+      "CHANGES_LOG.csv",
+      "ISSUES_LOG.csv",
+      "KNOWLEDGE_BASE.csv"
+    ]
+  },
+  "agents": {
+    "claude_code": {
+      "name": "Claude Code",
+      "role": "Backend Development & Infrastructure",
+      "ownership": [
+        "backend/**",
+        "infrastructure/**",
+        "modules/*/backend/**",
+        ".orchestration/**"
+      ],
+      "config_file": "governance/agents/claude-code-config.md"
+    },
+    "cursor_ai": {
+      "name": "Cursor AI",
+      "role": "Frontend Development",
+      "ownership": [
+        "frontend/**",
+        "modules/*/frontend/**"
+      ],
+      "config_file": "governance/agents/cursor-ai-config.md"
+    },
+    "chatgpt_codex": {
+      "name": "ChatGPT Codex",
+      "role": "Data Engineering & Testing",
+      "ownership": [
+        "scripts/**",
+        "data/**",
+        "tests/**"
+      ],
+      "config_file": "governance/agents/codex-config.md"
+    }
+  },
+  "validation_scripts": {
+    "csv_integrity": "scripts/validation/validate_csv_integrity.py",
+    "guardrails": "scripts/validation/validate_guardrails.py",
+    "sync_check": "scripts/validation/SYNC-CHECK.py",
+    "md_to_csv": "scripts/validation/md_to_csv_converter.py"
+  },
+  "reporting_scripts": {
+    "summary_report": "scripts/reporting/SUMMARY-REPORT.py",
+    "audit_report": "scripts/reporting/audit_report.py"
+  },
+  "hipaa_compliance": {
+    "phi_fields": [
+      "email",
+      "phone",
+      "ssn",
+      "npi",
+      "dea_number"
+    ],
+    "encryption_required": true,
+    "audit_logging_required": true,
+    "access_control_required": true
+  }
+}

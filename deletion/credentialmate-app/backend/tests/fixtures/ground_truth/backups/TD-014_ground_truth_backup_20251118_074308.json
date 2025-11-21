@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-014",
+  "file_path": "backend/uploads/2025/11/certificate-1157737702.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:03:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.90
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": null,
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "UpToDate",
+      "certificate_number": "1157737702",
+      "credits": null,
+      "completion_date": null,
+      "date_range": null,
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "UpToDate / Wolters Kluwer"
+    }
+  },
+  "notes": "Additional UpToDate certificate for consistency testing"
+}

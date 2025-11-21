@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-013",
+  "file_path": "backend/uploads/2025/11/Implicit bias CMW.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:02:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": null,
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "Implicit Bias Training",
+      "certificate_number": null,
+      "credits": 1.0,
+      "completion_date": null,
+      "date_range": null,
+      "category": "AMA PRA Category 1",
+      "issuing_authority": null
+    }
+  },
+  "notes": "Tests CME recognition for newer required topics"
+}

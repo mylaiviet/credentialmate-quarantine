@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-012",
+  "file_path": "backend/uploads/2025/11/PA Child abuse CME 2022.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:01:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": null,
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "Pennsylvania Child Abuse Recognition and Reporting",
+      "certificate_number": null,
+      "credits": 3.0,
+      "completion_date": null,
+      "date_range": "2022",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "Pennsylvania"
+    }
+  },
+  "notes": "State-mandated CME with AMA PRA Category 1 credits"
+}

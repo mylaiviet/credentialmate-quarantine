@@ -1,0 +1,71 @@
+{
+  "_comment_timestamp": "TIMESTAMP: 2025-11-15T00:00:00Z",
+  "_comment_origin": "ORIGIN: credentialmate-schemas",
+  "_comment_purpose": "PURPOSE: Synthetic test user data - Phase 1 scaffolding only",
+
+  "schema_version": "1.0.0",
+  "phase": "1-scaffolding",
+  "status": "placeholder",
+  "description": "Synthetic user data for testing and development",
+
+  "users": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "email": "test.provider1@example.com",
+      "full_name": "Dr. Jane Smith",
+      "role": "PROVIDER",
+      "specialty": "Internal Medicine",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z",
+      "updated_at": "2024-01-15T10:00:00Z",
+      "_comment": "Phase 1 placeholder - no encryption applied"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000002",
+      "email": "test.provider2@example.com",
+      "full_name": "Dr. John Doe",
+      "role": "PROVIDER",
+      "specialty": "Family Medicine",
+      "is_active": true,
+      "created_at": "2024-02-20T14:30:00Z",
+      "updated_at": "2024-02-20T14:30:00Z",
+      "_comment": "Phase 1 placeholder - no encryption applied"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000003",
+      "email": "test.admin@example.com",
+      "full_name": "Admin User",
+      "role": "ADMIN",
+      "specialty": null,
+      "is_active": true,
+      "created_at": "2024-01-01T09:00:00Z",
+      "updated_at": "2024-01-01T09:00:00Z",
+      "_comment": "Phase 1 placeholder - no encryption applied"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000004",
+      "email": "test.delegate@example.com",
+      "full_name": "Delegate User",
+      "role": "DELEGATE",
+      "specialty": null,
+      "is_active": true,
+      "created_at": "2024-03-10T11:15:00Z",
+      "updated_at": "2024-03-10T11:15:00Z",
+      "_comment": "Phase 1 placeholder - no encryption applied"
+    }
+  ],
+
+  "generation_notes": [
+    "Phase 1: Static synthetic data",
+    "Phase 2+: Dynamic data generation",
+    "Phase 2+: Add realistic password hashes",
+    "Phase 2+: Add encrypted field values",
+    "Phase 2+: Add related license and CME data references"
+  ],
+
+  "usage": {
+    "pytest": "Load this file in test fixtures",
+    "development": "Seed local development database",
+    "ci_cd": "Use for integration tests"
+  }
+}

@@ -1,0 +1,1114 @@
+{
+  "model_name": "Claude 3 Haiku",
+  "model_id": "anthropic.claude-3-haiku-20240307-v1:0",
+  "test_context": "Session 1-12 improved GT and normalization",
+  "overall_accuracy": 56.57142857142857,
+  "total_fields_tested": 175,
+  "total_fields_correct": 99,
+  "documents_tested": 20,
+  "field_accuracy": {
+    "provider_info.name": 100.0,
+    "provider_info.npi": 85.0,
+    "provider_info.professional_designation": 77.77777777777779,
+    "credential_details.title": 6.666666666666667,
+    "credential_details.certificate_number": 28.57142857142857,
+    "credential_details.credential_number": 66.66666666666666,
+    "credential_details.credits": 0.0,
+    "credential_details.completion_date": 85.71428571428571,
+    "credential_details.category": 0.0,
+    "credential_details.issuing_authority": 85.0,
+    "credential_details.additional_info.cme_credits": 100.0,
+    "credential_details.additional_info.cme_category": 0.0,
+    "credential_details.date_range": 55.55555555555556,
+    "credential_details.issue_date": 50.0,
+    "credential_details.expiration_date": 100.0,
+    "credential_details.status": 100.0,
+    "credential_details.jurisdiction": 100.0,
+    "credential_details.drug_schedules": 0.0,
+    "credential_details.address": 0.0,
+    "credential_details.specialty": 0.0,
+    "credential_details.certification_status": 0.0,
+    "credential_details.degree": 0.0,
+    "credential_details.graduation_year": 100.0,
+    "credential_details.program_type": 0.0,
+    "credential_details.additional_info.activity": 0.0,
+    "credential_details.additional_info.fee_paid": 0.0
+  },
+  "comparison": {
+    "sonnet_improved_gt": 85.1,
+    "sonnet_old_baseline": 62.0,
+    "haiku_vs_sonnet_improved": -28.528571428571425,
+    "haiku_vs_sonnet_baseline": -5.428571428571431
+  },
+  "recommendation": "DEFINITELY STAY WITH SONNET - Haiku significantly worse",
+  "detailed_results": [
+    {
+      "data_id": "TD-001",
+      "document_type": null,
+      "accuracy": 50.0,
+      "fields_correct": 6,
+      "total_fields": 12,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "UpToDate",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "1266492503",
+          "actual": "1266492503",
+          "match": true
+        },
+        "credential_details.credential_number": {
+          "expected": "1266492503",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 25.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-06-07",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "UpToDate / Wolters Kluwer",
+          "actual": "Wolters Kluwer",
+          "match": true
+        },
+        "credential_details.additional_info.cme_credits": {
+          "expected": 25.0,
+          "actual": 25.0,
+          "match": true
+        },
+        "credential_details.additional_info.cme_category": {
+          "expected": "AMA PRA Category 1",
+          "actual": "AMA PRA Category 1 Credit(s)",
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-002",
+      "document_type": null,
+      "accuracy": 55.55555555555556,
+      "fields_correct": 5,
+      "total_fields": 9,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "UpToDate",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "11017655802",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 25.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2023-07-10",
+          "actual": "2023-07-10",
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "UpToDate / Wolters Kluwer",
+          "actual": "Wolters Kluwer",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-003",
+      "document_type": null,
+      "accuracy": 60.0,
+      "fields_correct": 6,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "UpToDate",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "1157731502",
+          "actual": "1157731502",
+          "match": true
+        },
+        "credential_details.credits": {
+          "expected": 10.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2024-05-29",
+          "actual": "2024-05-29",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": "May 29, 2024 - May 29, 2024",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "UpToDate / Wolters Kluwer",
+          "actual": "Wolters Kluwer",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-004",
+      "document_type": null,
+      "accuracy": 63.63636363636363,
+      "fields_correct": 7,
+      "total_fields": 11,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Tricia Huong Thi Nguyen",
+          "actual": "Tricia Huong Thi Nguyen",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MEDICAL DOCTOR",
+          "match": true
+        },
+        "credential_details.credential_number": {
+          "expected": "2500065000",
+          "actual": "2500065000",
+          "match": true
+        },
+        "credential_details.issue_date": {
+          "expected": "2025-10-28",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.expiration_date": {
+          "expected": "2026-10-31",
+          "actual": "2026-10-31",
+          "match": true
+        },
+        "credential_details.status": {
+          "expected": "active",
+          "actual": "active",
+          "match": true
+        },
+        "credential_details.jurisdiction": {
+          "expected": "Missouri",
+          "actual": "MO",
+          "match": true
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Missouri Department of Health and Senior Services - Bureau of Narcotics and Dangerous Drugs",
+          "actual": "BUREAU OF NARCOTICS AND DANGEROUS DRUGS, MISSOURI DEPARTMENT OF HEALTH AND SENIOR SERVICES",
+          "match": false
+        },
+        "credential_details.drug_schedules": {
+          "expected": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "actual": "2 3 4 5",
+          "match": false
+        },
+        "credential_details.address": {
+          "expected": "1000 CARONDELET DR, KANSAS CITY, MO 64114-4673",
+          "actual": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-005",
+      "document_type": null,
+      "accuracy": 42.857142857142854,
+      "fields_correct": 3,
+      "total_fields": 7,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Tricia H. Nguyen",
+          "actual": "Tricia H. Nguyen",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.title": {
+          "expected": "Diplomate of Internal Medicine",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "The American Board of Internal Medicine",
+          "actual": "The American Board of Internal Medicine",
+          "match": true
+        },
+        "credential_details.specialty": {
+          "expected": "Internal Medicine",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certification_status": {
+          "expected": "certified",
+          "actual": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-006",
+      "document_type": null,
+      "accuracy": 66.66666666666666,
+      "fields_correct": 4,
+      "total_fields": 6,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Bs Tricia Huong Nguyen",
+          "actual": "Bs Tricia Huong Nguyen",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": "MD",
+          "match": false
+        },
+        "credential_details.degree": {
+          "expected": "Doctor of Medicine",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "University of Missouri",
+          "actual": "Curators of the University of Missouri",
+          "match": true
+        },
+        "credential_details.graduation_year": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-009",
+      "document_type": null,
+      "accuracy": 50.0,
+      "fields_correct": 2,
+      "total_fields": 4,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Ashok Sehgal",
+          "actual": "Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": "4.58844",
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "NetCE",
+          "actual": "NetCE",
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "CME/CE",
+          "actual": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-010",
+      "document_type": null,
+      "accuracy": 75.0,
+      "fields_correct": 3,
+      "total_fields": 4,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Md Ashok Sehgal",
+          "actual": "Md Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Wills Eye Hospital",
+          "actual": "Wills Eye Hospital",
+          "match": true
+        },
+        "credential_details.program_type": {
+          "expected": "training",
+          "actual": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-011",
+      "document_type": null,
+      "accuracy": 50.0,
+      "fields_correct": 5,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Florida Prescribing Controlled Substances",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "20-688685",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 2.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2023-01-30",
+          "actual": "2023-01-30",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": "2023",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Florida Osteopathic Medical Association",
+          "actual": "FLORIDA OSTEOPATHIC MEDICAL ASSOCIATION",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-012",
+      "document_type": null,
+      "accuracy": 40.0,
+      "fields_correct": 4,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Wayne Hilliard",
+          "actual": "Michael Wayne Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": "MD61032085",
+          "match": false
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MD",
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Child Abuse Identification and Reporting: The Pennsylvania Requirement",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "#97542",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 3.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2022-12-14",
+          "actual": "2022-12-14",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": "2022",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "NetCE",
+          "actual": "NetCE",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-013",
+      "document_type": null,
+      "accuracy": 60.0,
+      "fields_correct": 6,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "michael hilliard",
+          "actual": "michael hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Implicit Bias Training",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "100047683",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 1.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2019-10-01",
+          "actual": "2019-10-01",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Quality Interactions and Amedco LLC",
+          "actual": "Quality Interactions and Amedco LLC",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-014",
+      "document_type": null,
+      "accuracy": 40.0,
+      "fields_correct": 4,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "UpToDate",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "1157737702",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 10.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2024-05-29",
+          "actual": "2024-05-29",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": "2024-05-29 to 2024-05-29",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "UpToDate / Wolters Kluwer",
+          "actual": "Wolters Kluwer UpToDate",
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-015",
+      "document_type": null,
+      "accuracy": 60.0,
+      "fields_correct": 6,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "michael hilliard",
+          "actual": "michael hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.certificate_number": {
+          "expected": "37318187",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 8.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2024",
+          "actual": "2024-05-28",
+          "match": false
+        },
+        "credential_details.date_range": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "InforMed",
+          "actual": "InforMed",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-016",
+      "document_type": null,
+      "accuracy": 60.0,
+      "fields_correct": 6,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael W Hilliard",
+          "actual": "Michael W Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Child Abuse: Pennsylvania Mandated Reporter Training",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "369708",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 2.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2024-12-17",
+          "actual": "2024-12-17",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "CEUFast, Inc.",
+          "actual": "CEUFast, Inc.",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-017",
+      "document_type": null,
+      "accuracy": 71.42857142857143,
+      "fields_correct": 5,
+      "total_fields": 7,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Md Ashok Sehgal",
+          "actual": "Md Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MD",
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "OnDemand Chiefs' Rounds 5/17/2024",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "Event ID 760",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Wills Eye Hospital",
+          "actual": "Wills Eye Hospital",
+          "match": true
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-06",
+          "actual": "2025-05-06",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-018",
+      "document_type": null,
+      "accuracy": 85.71428571428571,
+      "fields_correct": 6,
+      "total_fields": 7,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Md Ashok Sehgal",
+          "actual": "Md Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MD",
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "OnDemand Chiefs' Rounds 5/10/2024",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "Event ID 759",
+          "actual": "Event ID 759",
+          "match": true
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Wills Eye Hospital",
+          "actual": "Wills Eye Hospital",
+          "match": true
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-06",
+          "actual": "2025-05-06",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-019",
+      "document_type": null,
+      "accuracy": 60.0,
+      "fields_correct": 6,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Ashok Sehgal 19410",
+          "actual": "Ashok Sehgal 19410",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Mental Health Issues Common to Veterans and Their Families",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "#96342",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 2.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-09",
+          "actual": "2025-05-09",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "NetCE",
+          "actual": "NetCE",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-020",
+      "document_type": null,
+      "accuracy": 40.0,
+      "fields_correct": 4,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Ashok Sehgal",
+          "actual": "Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": "19410",
+          "match": false
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.title": {
+          "expected": "Pain Management Pearls: Opioids and Culture",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "#97281",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 2.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-08",
+          "actual": "2025-05-08",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "NetCE",
+          "actual": "NetCE",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-021",
+      "document_type": null,
+      "accuracy": 85.71428571428571,
+      "fields_correct": 6,
+      "total_fields": 7,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "michael hilliard",
+          "actual": "michael hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Polaris Human Trafficking Training",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Polaris Project",
+          "actual": "Polaris",
+          "match": true
+        },
+        "credential_details.completion_date": {
+          "expected": "2024-06",
+          "actual": "2024-06",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-022",
+      "document_type": null,
+      "accuracy": 45.45454545454545,
+      "fields_correct": 5,
+      "total_fields": 11,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Tricia Nguyen",
+          "actual": "Tricia Nguyen",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": "PRACTITIONER",
+          "match": false
+        },
+        "credential_details.credential_number": {
+          "expected": "FN6220975",
+          "actual": "FN6220975",
+          "match": true
+        },
+        "credential_details.issue_date": {
+          "expected": "2025-10-30",
+          "actual": "2025-10-30",
+          "match": true
+        },
+        "credential_details.expiration_date": {
+          "expected": "2028-10-31",
+          "actual": "2028-10-31",
+          "match": true
+        },
+        "credential_details.drug_schedules": {
+          "expected": [
+            "2",
+            "2N",
+            "3",
+            "3N",
+            "4",
+            "5"
+          ],
+          "actual": "2.2N,3, 3N,4,5",
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "United States Department of Justice - Drug Enforcement Administration",
+          "actual": "UNITED STATES DEPARTMENT OF JUSTICE DRUG ENFORCEMENT ADMINISTRATION",
+          "match": false
+        },
+        "credential_details.additional_info.activity": {
+          "expected": "PRACTITIONER",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.address": {
+          "expected": "1000 CARONDELET DR, KANSAS CITY, MO 64114",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.additional_info.fee_paid": {
+          "expected": "$888",
+          "actual": null,
+          "match": false
+        }
+      }
+    }
+  ],
+  "timestamp": "2025-11-19T01:07:53.529025Z"
+}

@@ -1,0 +1,117 @@
+{
+  "_comment_timestamp": "TIMESTAMP: 2025-11-15T00:00:00Z",
+  "_comment_origin": "ORIGIN: credentialmate-schemas",
+  "_comment_purpose": "PURPOSE: Synthetic test CME data - Phase 1 scaffolding only",
+
+  "schema_version": "1.0.0",
+  "phase": "1-scaffolding",
+  "status": "placeholder",
+  "description": "Synthetic CME activity data for testing and development",
+
+  "cme_activities": [
+    {
+      "id": "30000000-0000-0000-0000-000000000001",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "activity_title": "Advanced Pain Management: Opioid Prescribing Best Practices",
+      "provider_name": "American Medical Association",
+      "credits_earned": 5.0,
+      "category": "CATEGORY_1",
+      "completion_date": "2024-06-15",
+      "applicable_states": ["CA", "TX", "NY"],
+      "topics": ["pain_management", "opioid_prescribing", "controlled_substances"],
+      "document_id": "20000000-0000-0000-0000-000000000010",
+      "created_at": "2024-06-16T09:00:00Z",
+      "updated_at": "2024-06-16T09:00:00Z",
+      "_comment": "Pain management CME for Dr. Jane Smith"
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000002",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "activity_title": "Medical Ethics in Modern Practice",
+      "provider_name": "California Medical Board",
+      "credits_earned": 10.0,
+      "category": "CATEGORY_1",
+      "completion_date": "2024-03-20",
+      "applicable_states": ["CA"],
+      "topics": ["ethics", "professional_conduct"],
+      "document_id": "20000000-0000-0000-0000-000000000011",
+      "created_at": "2024-03-21T10:30:00Z",
+      "updated_at": "2024-03-21T10:30:00Z",
+      "_comment": "Ethics CME required for California renewal"
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000003",
+      "user_id": "00000000-0000-0000-0000-000000000002",
+      "activity_title": "Geriatric Medicine Update 2024",
+      "provider_name": "American Academy of Family Physicians",
+      "credits_earned": 15.0,
+      "category": "AMA_PRA",
+      "completion_date": "2024-09-10",
+      "applicable_states": ["TX", "FL"],
+      "topics": ["geriatrics", "chronic_disease_management"],
+      "document_id": "20000000-0000-0000-0000-000000000012",
+      "created_at": "2024-09-11T14:00:00Z",
+      "updated_at": "2024-09-11T14:00:00Z",
+      "_comment": "Geriatrics CME for Dr. John Doe"
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000004",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "activity_title": "Implicit Bias in Healthcare",
+      "provider_name": "Institute for Healthcare Improvement",
+      "credits_earned": 2.0,
+      "category": "CATEGORY_1",
+      "completion_date": "2024-11-05",
+      "applicable_states": ["CA"],
+      "topics": ["implicit_bias", "cultural_competency"],
+      "document_id": "20000000-0000-0000-0000-000000000013",
+      "created_at": "2024-11-06T08:15:00Z",
+      "updated_at": "2024-11-06T08:15:00Z",
+      "_comment": "Implicit bias CME required for California"
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000005",
+      "user_id": "00000000-0000-0000-0000-000000000002",
+      "activity_title": "COVID-19 Updates and Vaccine Science",
+      "provider_name": "Centers for Disease Control",
+      "credits_earned": 3.5,
+      "category": "CATEGORY_2",
+      "completion_date": "2024-07-22",
+      "applicable_states": ["TX"],
+      "topics": ["infectious_disease", "vaccination"],
+      "document_id": null,
+      "created_at": "2024-07-23T11:45:00Z",
+      "updated_at": "2024-07-23T11:45:00Z",
+      "_comment": "Category 2 CME without certificate uploaded"
+    }
+  ],
+
+  "generation_notes": [
+    "Phase 1: Static synthetic data with diverse topics",
+    "Phase 2+: Add more state-specific requirements",
+    "Phase 2+: Add topic requirement validation",
+    "Phase 2+: Link to actual synthetic certificate files",
+    "Phase 2+: Add compliance calculation test cases"
+  ],
+
+  "test_scenarios": {
+    "ca_required_topics": "User 00...001 has ethics and implicit bias",
+    "pain_management_requirement": "User 00...001 has pain management CME",
+    "category_1_vs_2": "Mix of CATEGORY_1 and CATEGORY_2 credits",
+    "multi_state_applicable": "Some CMEs apply to multiple states",
+    "missing_certificate": "ID ending in 005 has no document_id"
+  },
+
+  "compliance_calculations": {
+    "user_00000001_ca_total": "17.0 credits (5 + 10 + 2)",
+    "user_00000002_tx_total": "18.5 credits (15 + 3.5)",
+    "ca_ethics_requirement": "10 credits satisfied by activity 002",
+    "ca_pain_mgmt_requirement": "5 credits satisfied by activity 001"
+  },
+
+  "usage": {
+    "pytest": "Load this file in test fixtures for CME compliance tests",
+    "development": "Seed local development database",
+    "compliance_testing": "Test state requirement calculations"
+  }
+}

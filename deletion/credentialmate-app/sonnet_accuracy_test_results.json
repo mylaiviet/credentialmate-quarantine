@@ -1,0 +1,317 @@
+{
+  "model_name": "Claude 3 Sonnet",
+  "model_id": "anthropic.claude-3-sonnet-20240229-v1:0",
+  "overall_accuracy": 64.58333333333334,
+  "total_fields_tested": 48,
+  "total_fields_correct": 31,
+  "documents_tested": 6,
+  "field_accuracy": {
+    "provider_info.name": 100.0,
+    "provider_info.npi": 100.0,
+    "credential_details.issuing_authority": 100.0,
+    "credential_details.category": 0.0,
+    "provider_info.professional_designation": 80.0,
+    "credential_details.title": 0.0,
+    "credential_details.certificate_number": 40.0,
+    "credential_details.credits": 0.0,
+    "credential_details.completion_date": 100.0,
+    "credential_details.date_range": 66.66666666666666
+  },
+  "detailed_results": [
+    {
+      "data_id": "TD-009",
+      "document_type": null,
+      "accuracy": 75.0,
+      "fields_correct": 3,
+      "total_fields": 4,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Ashok Sehgal",
+          "actual": "Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.issuing_authority": {
+          "expected": "NetCE",
+          "actual": "NetCE",
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "CME/CE",
+          "actual": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "data_id": "TD-011",
+      "document_type": null,
+      "accuracy": 50.0,
+      "fields_correct": 5,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Michael Hilliard",
+          "actual": "Michael Hilliard",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": "Medical Doctor",
+          "match": false
+        },
+        "credential_details.title": {
+          "expected": "Florida Prescribing Controlled Substances",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "20-688685",
+          "actual": "20-688685",
+          "match": true
+        },
+        "credential_details.credits": {
+          "expected": 2.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2023-01-30",
+          "actual": "2023-01-30",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": "2023",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Florida Osteopathic Medical Association",
+          "actual": "Florida Osteopathic Medical Association",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-017",
+      "document_type": null,
+      "accuracy": 71.42857142857143,
+      "fields_correct": 5,
+      "total_fields": 7,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Md Ashok Sehgal",
+          "actual": "Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MD",
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "OnDemand Chiefs' Rounds 5/17/2024",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "Event ID 760",
+          "actual": "Event ID 7606",
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Wills Eye Hospital",
+          "actual": "Wills Eye Hospital",
+          "match": true
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-06",
+          "actual": "2025-05-06",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-018",
+      "document_type": null,
+      "accuracy": 71.42857142857143,
+      "fields_correct": 5,
+      "total_fields": 7,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Md Ashok Sehgal",
+          "actual": "Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MD",
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "OnDemand Chiefs' Rounds 5/10/2024",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "Event ID 759",
+          "actual": "Event ID 7849",
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "Wills Eye Hospital",
+          "actual": "Wills Eye Hospital",
+          "match": true
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-06",
+          "actual": "2025-05-06",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-019",
+      "document_type": null,
+      "accuracy": 70.0,
+      "fields_correct": 7,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Ashok Sehgal 19410",
+          "actual": "Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Mental Health Issues Common to Veterans and Their Families",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "#96342",
+          "actual": "96342",
+          "match": true
+        },
+        "credential_details.credits": {
+          "expected": 2.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-09",
+          "actual": "2025-05-09",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "NetCE",
+          "actual": "NetCE",
+          "match": true
+        }
+      }
+    },
+    {
+      "data_id": "TD-020",
+      "document_type": null,
+      "accuracy": 60.0,
+      "fields_correct": 6,
+      "total_fields": 10,
+      "field_results": {
+        "provider_info.name": {
+          "expected": "Ashok Sehgal",
+          "actual": "Ashok Sehgal",
+          "match": true
+        },
+        "provider_info.npi": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "provider_info.professional_designation": {
+          "expected": "MD",
+          "actual": "MD",
+          "match": true
+        },
+        "credential_details.title": {
+          "expected": "Pain Management Pearls: Opioids and Culture",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.certificate_number": {
+          "expected": "#97281",
+          "actual": "#97781",
+          "match": false
+        },
+        "credential_details.credits": {
+          "expected": 2.0,
+          "actual": null,
+          "match": false
+        },
+        "credential_details.completion_date": {
+          "expected": "2025-05-08",
+          "actual": "2025-05-08",
+          "match": true
+        },
+        "credential_details.date_range": {
+          "expected": null,
+          "actual": null,
+          "match": true
+        },
+        "credential_details.category": {
+          "expected": "AMA PRA Category 1",
+          "actual": null,
+          "match": false
+        },
+        "credential_details.issuing_authority": {
+          "expected": "NetCE",
+          "actual": "NetCE",
+          "match": true
+        }
+      }
+    }
+  ],
+  "timestamp": "2025-11-19T00:15:28.116854Z"
+}

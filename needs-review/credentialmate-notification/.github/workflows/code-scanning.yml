@@ -1,0 +1,101 @@
+# TIMESTAMP: 2025-11-16T00:00:00Z
+# ORIGIN: credentialmate-notification
+# UPDATED_FOR: soc2-hardening
+
+name: Notification Service Security Scanning
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly Monday at 2 AM UTC
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  bandit:
+    name: Bandit - Python Security
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Bandit
+        run: pip install bandit[toml]
+
+      - name: Run Bandit
+        run: |
+          bandit -r app -ll -f json -o bandit-report.json || true
+          bandit -r app -ll -f txt
+
+      - name: Upload Bandit Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: bandit-report
+          path: bandit-report.json
+          retention-days: 30
+
+  pip-audit:
+    name: pip-audit - Dependency Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Run pip-audit
+        run: pip-audit --desc || true
+
+  semgrep:
+    name: Semgrep - SAST Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          generateSarif: true
+          config: |
+            p/owasp-top-ten
+            p/security-audit
+            p/python
+
+      - name: Upload SARIF Report
+        if: always()
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: semgrep.sarif
+          category: semgrep-notification
+
+  report:
+    name: Security Report Summary
+    needs: [bandit, pip-audit, semgrep]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Create Summary
+        run: |
+          echo "# Notification Service Security Scan Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Scan completed at: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Reports Generated" >> $GITHUB_STEP_SUMMARY
+          echo "- Bandit (Python security)" >> $GITHUB_STEP_SUMMARY
+          echo "- pip-audit (Dependency vulnerabilities)" >> $GITHUB_STEP_SUMMARY
+          echo "- Semgrep (Static analysis for injection attacks)" >> $GITHUB_STEP_SUMMARY

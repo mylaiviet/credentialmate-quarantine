@@ -1,0 +1,100 @@
+{
+  "db_password_secret_arn": {
+    "sensitive": true,
+    "type": "string",
+    "value": "arn:aws:secretsmanager:us-east-1:051826703172:secret:credentialmate/db-password-yAVt4i"
+  },
+  "deployment_summary": {
+    "sensitive": false,
+    "type": "string",
+    "value": "\nCredentialMate Infrastructure Deployed Successfully!\n\nVPC CIDR: 10.1.0.0/16 (Separate from karematch)\nRegion: us-east-1\n\nNext Steps:\n1. Update domain nameservers at your registrar\n2. Wait for SSL certificate validation (~30 minutes)\n3. Create EC2 key pair: aws ec2 create-key-pair --key-name credentialmate-key\n4. Launch EC2 instance with user data script\n5. Configure Nginx with Let's Encrypt\n6. Deploy application containers\n\nDatabase Connection:\n- Host: credentialmate-db.cm1ksgqm0c00.us-east-1.rds.amazonaws.com\n- Port: 5432\n- Database: credentialmate\n- Username: credentialmate\n- Password: Stored in Secrets Manager\n\nPublic IP: 34.238.128.126\n\n"
+  },
+  "ec2_instance_profile": {
+    "sensitive": false,
+    "type": "string",
+    "value": "credentialmate-ec2-profile"
+  },
+  "ec2_security_group_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-04cdf2653ea2d9a22"
+  },
+  "elastic_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "34.238.128.126"
+  },
+  "jwt_secret_arn": {
+    "sensitive": true,
+    "type": "string",
+    "value": "arn:aws:secretsmanager:us-east-1:051826703172:secret:credentialmate/jwt-secret-yAVt4i"
+  },
+  "private_subnet_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "subnet-0171c48eb00ddce62"
+  },
+  "public_subnet_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "subnet-05f42203b7a60bfc0"
+  },
+  "rds_address": {
+    "sensitive": false,
+    "type": "string",
+    "value": "credentialmate-db.cm1ksgqm0c00.us-east-1.rds.amazonaws.com"
+  },
+  "rds_database_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "credentialmate"
+  },
+  "rds_endpoint": {
+    "sensitive": true,
+    "type": "string",
+    "value": "credentialmate-db.cm1ksgqm0c00.us-east-1.rds.amazonaws.com:5432"
+  },
+  "rds_port": {
+    "sensitive": false,
+    "type": "number",
+    "value": 5432
+  },
+  "route53_nameservers": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    ],
+    "value": [
+      "ns-1549.awsdns-01.co.uk",
+      "ns-1230.awsdns-25.org",
+      "ns-640.awsdns-16.net",
+      "ns-234.awsdns-29.com"
+    ]
+  },
+  "s3_backups_bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "credentialmate-backups"
+  },
+  "s3_documents_bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "credentialmate-documents"
+  },
+  "ssl_certificate_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:acm:us-east-1:051826703172:certificate/ba7178ef-07ab-49c1-a2ce-f5ae69e1b88c"
+  },
+  "vpc_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "vpc-0c51f49e5d49966ba"
+  }
+}

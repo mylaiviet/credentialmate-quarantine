@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-016",
+  "file_path": "backend/uploads/2025/11/PA Requirements_Certificate_No_369708.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:05:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": null,
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "Pennsylvania Requirements",
+      "certificate_number": "369708",
+      "credits": null,
+      "completion_date": null,
+      "date_range": null,
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "Pennsylvania"
+    }
+  },
+  "notes": "State-mandated CME certificate"
+}

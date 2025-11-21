@@ -1,0 +1,124 @@
+{
+  "_comment_timestamp": "TIMESTAMP: 2025-11-15T00:00:00Z",
+  "_comment_origin": "ORIGIN: credentialmate-schemas",
+  "_comment_purpose": "PURPOSE: Document schema snapshot - Phase 1 scaffolding only",
+
+  "schema_version": "1.0.0",
+  "phase": "1-scaffolding",
+  "status": "placeholder",
+
+  "table_name": "documents",
+  "description": "Document metadata schema snapshot for version 1.0.0",
+
+  "fields": [
+    {
+      "name": "id",
+      "type": "UUID",
+      "nullable": false,
+      "primary_key": true,
+      "description": "Unique document identifier"
+    },
+    {
+      "name": "user_id",
+      "type": "UUID",
+      "nullable": false,
+      "foreign_key": "users.id",
+      "description": "Reference to user who uploaded this document"
+    },
+    {
+      "name": "document_type",
+      "type": "ENUM('LICENSE', 'CME_CERTIFICATE', 'BOARD_CERT', 'DEA', 'OTHER')",
+      "nullable": false,
+      "description": "Classified document type"
+    },
+    {
+      "name": "file_name",
+      "type": "VARCHAR(255)",
+      "nullable": false,
+      "description": "Original file name"
+    },
+    {
+      "name": "s3_key",
+      "type": "TEXT",
+      "nullable": false,
+      "description": "S3 object key for encrypted document"
+    },
+    {
+      "name": "file_size",
+      "type": "BIGINT",
+      "nullable": false,
+      "description": "File size in bytes"
+    },
+    {
+      "name": "mime_type",
+      "type": "VARCHAR(100)",
+      "nullable": false,
+      "description": "MIME type (e.g., application/pdf, image/png)"
+    },
+    {
+      "name": "parsed_data",
+      "type": "JSONB",
+      "nullable": true,
+      "description": "Extracted data from document parsing"
+    },
+    {
+      "name": "confidence_score",
+      "type": "DECIMAL(4,3)",
+      "nullable": true,
+      "description": "AI classification confidence (0-1)"
+    },
+    {
+      "name": "validation_status",
+      "type": "ENUM('PENDING', 'VALIDATED', 'REJECTED', 'NEEDS_REVIEW')",
+      "nullable": false,
+      "default": "PENDING",
+      "description": "Document validation status"
+    },
+    {
+      "name": "uploaded_at",
+      "type": "TIMESTAMP",
+      "nullable": false,
+      "default": "CURRENT_TIMESTAMP",
+      "description": "Upload timestamp"
+    },
+    {
+      "name": "processed_at",
+      "type": "TIMESTAMP",
+      "nullable": true,
+      "description": "AI processing completion timestamp"
+    }
+  ],
+
+  "indexes": [
+    {
+      "name": "idx_documents_user_id",
+      "columns": ["user_id"],
+      "type": "btree"
+    },
+    {
+      "name": "idx_documents_type",
+      "columns": ["document_type"],
+      "type": "btree"
+    },
+    {
+      "name": "idx_documents_validation_status",
+      "columns": ["validation_status"],
+      "type": "btree"
+    }
+  ],
+
+  "constraints": [
+    {
+      "type": "check",
+      "name": "ck_documents_confidence_range",
+      "expression": "confidence_score BETWEEN 0 AND 1"
+    }
+  ],
+
+  "phase_2_requirements": [
+    "Add OCR text storage",
+    "Add versioning for document updates",
+    "Add retention policy fields",
+    "Add HIPAA audit trail"
+  ]
+}

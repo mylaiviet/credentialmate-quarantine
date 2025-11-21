@@ -1,0 +1,13 @@
+Compliance_ID,Framework,Requirement,Description,Status,Priority,Owner,Last_Review_Date,Next_Review_Date,Evidence_Links,Tracker_IDs,Notes
+CMP-001,HIPAA,164.308(a)(1)(i),Security Management Process,Active,Critical,Claude Code,2025-11-10,2026-02-10,CHANGES_LOG.csv,TRK-001,Ongoing security management and risk analysis
+CMP-002,HIPAA,164.308(a)(3)(i),Workforce Security,Active,High,DevOps,2025-11-10,2026-02-10,AGENT-OWNERSHIP.yaml,TRK-002,Role-based access control and authorization
+CMP-003,HIPAA,164.308(a)(4)(i),Information Access Management,Active,High,Claude Code,2025-11-10,2026-02-10,AUTH-001,TRK-003,User authentication and authorization system
+CMP-004,HIPAA,164.308(a)(5)(i),Security Awareness Training,Active,Medium,DevOps,2025-11-10,2026-02-10,Documentation,TRK-004,Team security training and awareness
+CMP-005,HIPAA,164.310(a)(1),Facility Access Controls,Active,Medium,DevOps,2025-11-10,2026-02-10,AWS Infrastructure,TRK-005,Physical and cloud infrastructure security
+CMP-006,HIPAA,164.312(a)(1),Access Control,Active,Critical,Claude Code,2025-11-10,2026-02-10,AUTH-001,TRK-006,Technical access control mechanisms
+CMP-007,HIPAA,164.312(b),Audit Controls,Active,Critical,Claude Code,2025-11-10,2026-02-10,CHANGES_LOG.csv,TRK-007|TRK-12120957,Audit logging and monitoring
+CMP-008,HIPAA,164.312(c)(1),Integrity Controls,Active,High,Claude Code,2025-11-10,2026-02-10,SECURITY-003,TRK-008,Data integrity and validation
+CMP-009,HIPAA,164.312(d),Person or Entity Authentication,Active,Critical,Claude Code,2025-11-10,2026-02-10,AUTH-001,TRK-009,Authentication mechanisms
+CMP-010,HIPAA,164.312(e)(1),Transmission Security,Active,High,DevOps,2025-11-10,2026-02-10,AWS ACM SSL,TRK-010,Encrypted data transmission
+CMP-011,SOC2,CC6.1,Logical Access Controls,Active,High,Claude Code,2025-11-10,2026-02-10,AUTH-001,TRK-011,Access control implementation
+CMP-012,SOC2,CC7.2,System Monitoring,Active,High,DevOps,2025-11-10,2026-02-10,DEPLOY-004,TRK-012|TRK-12120957,Monitoring and alerting systems

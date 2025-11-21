@@ -1,0 +1,19 @@
+================================================================================
+HAIKU VS SONNET ACCURACY COMPARISON
+================================================================================
+
+Testing Strategy:
+- Same 23 documents
+- Same ground truth
+- Only variable: Model (Haiku vs Sonnet)
+
+Cost Analysis:
+- Haiku: $0.015/doc (92% cheaper)
+- Sonnet: $0.18/doc (current)
+
+Press Enter to start Haiku test...Traceback (most recent call last):
+  File "C:\CREDENTIALMATE-REBUILD\credentialmate\credentialmate-app\backend\test_haiku_vs_sonnet_accuracy.py", line 337, in <module>
+    compare_models()
+  File "C:\CREDENTIALMATE-REBUILD\credentialmate\credentialmate-app\backend\test_haiku_vs_sonnet_accuracy.py", line 206, in compare_models
+    input("Press Enter to start Haiku test...")
+EOFError: EOF when reading a line

@@ -1,0 +1,105 @@
+{
+  "_comment_timestamp": "TIMESTAMP: 2025-11-15T00:00:00Z",
+  "_comment_origin": "ORIGIN: credentialmate-schemas",
+  "_comment_purpose": "PURPOSE: Synthetic test license data - Phase 1 scaffolding only",
+
+  "schema_version": "1.0.0",
+  "phase": "1-scaffolding",
+  "status": "placeholder",
+  "description": "Synthetic license data for testing and development",
+
+  "licenses": [
+    {
+      "id": "10000000-0000-0000-0000-000000000001",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "license_type": "MEDICAL_LICENSE",
+      "license_number": "A123456",
+      "state": "CA",
+      "issue_date": "2020-06-15",
+      "expiration_date": "2026-06-15",
+      "status": "ACTIVE",
+      "document_id": "20000000-0000-0000-0000-000000000001",
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T10:30:00Z",
+      "_comment": "California medical license for Dr. Jane Smith"
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000002",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "license_type": "DEA",
+      "license_number": "FS1234563",
+      "state": "CA",
+      "issue_date": "2021-03-10",
+      "expiration_date": "2025-03-10",
+      "status": "ACTIVE",
+      "document_id": "20000000-0000-0000-0000-000000000002",
+      "created_at": "2024-01-15T10:35:00Z",
+      "updated_at": "2024-01-15T10:35:00Z",
+      "_comment": "DEA license for Dr. Jane Smith (expiring soon)"
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000003",
+      "user_id": "00000000-0000-0000-0000-000000000002",
+      "license_type": "MEDICAL_LICENSE",
+      "license_number": "12345678",
+      "state": "TX",
+      "issue_date": "2019-09-01",
+      "expiration_date": "2027-09-01",
+      "status": "ACTIVE",
+      "document_id": "20000000-0000-0000-0000-000000000003",
+      "created_at": "2024-02-20T14:45:00Z",
+      "updated_at": "2024-02-20T14:45:00Z",
+      "_comment": "Texas medical license for Dr. John Doe"
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000004",
+      "user_id": "00000000-0000-0000-0000-000000000002",
+      "license_type": "BOARD_CERTIFICATION",
+      "license_number": "ABFM-98765",
+      "state": "TX",
+      "issue_date": "2018-12-15",
+      "expiration_date": "2028-12-15",
+      "status": "ACTIVE",
+      "document_id": "20000000-0000-0000-0000-000000000004",
+      "created_at": "2024-02-20T15:00:00Z",
+      "updated_at": "2024-02-20T15:00:00Z",
+      "_comment": "Board certification for Dr. John Doe"
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000005",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "license_type": "CSR",
+      "license_number": "CSR-CA-45678",
+      "state": "CA",
+      "issue_date": "2022-01-20",
+      "expiration_date": "2024-01-20",
+      "status": "EXPIRED",
+      "document_id": null,
+      "created_at": "2024-01-15T10:40:00Z",
+      "updated_at": "2024-01-21T00:00:00Z",
+      "_comment": "Expired CSR license for Dr. Jane Smith"
+    }
+  ],
+
+  "generation_notes": [
+    "Phase 1: Static synthetic data with various states",
+    "Phase 2+: Add more diverse state coverage",
+    "Phase 2+: Add license number format validation per state",
+    "Phase 2+: Add encrypted license number storage",
+    "Phase 2+: Link to actual synthetic document files"
+  ],
+
+  "test_scenarios": {
+    "active_licenses": "IDs ending in 001, 003, 004",
+    "expiring_soon": "ID ending in 002 (expires 2025-03-10)",
+    "expired": "ID ending in 005",
+    "multi_state_provider": "User 00...001 has CA licenses",
+    "single_state_provider": "User 00...002 has TX licenses"
+  },
+
+  "usage": {
+    "pytest": "Load this file in test fixtures for license tests",
+    "development": "Seed local development database",
+    "compliance_testing": "Test expiration notification triggers"
+  }
+}

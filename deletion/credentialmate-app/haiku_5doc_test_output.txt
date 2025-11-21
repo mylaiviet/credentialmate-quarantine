@@ -1,0 +1,60 @@
+================================================================================
+QUICK HAIKU TEST - 5 DOCUMENTS
+================================================================================
+
+Testing: Claude 3 Haiku
+Model ID: anthropic.claude-3-haiku-20240307-v1:0
+Documents: First 5 from test catalog
+
+[1/5] Testing TD-001...
+  Accuracy: 50.0% (6/12 fields)
+[2/5] Testing TD-002...
+  Accuracy: 44.4% (4/9 fields)
+[3/5] Testing TD-003...
+  Accuracy: 60.0% (6/10 fields)
+[4/5] Testing TD-004...
+  Accuracy: 63.6% (7/11 fields)
+[5/5] Testing TD-005...
+  Accuracy: 42.9% (3/7 fields)
+
+================================================================================
+HAIKU QUICK TEST RESULTS
+================================================================================
+
+Overall Accuracy: 53.1%
+Documents Tested: 5
+Total Fields: 49
+Correct Fields: 26
+
+Field-Level Accuracy:
+  credential_details.additional_info.cme_category: 0.0%
+  credential_details.additional_info.cme_credits: 100.0%
+  credential_details.address: 0.0%
+  credential_details.category: 0.0%
+  credential_details.certificate_number: 33.3%
+  credential_details.certification_status: 0.0%
+  credential_details.completion_date: 66.7%
+  credential_details.credential_number: 100.0%
+  credential_details.credits: 0.0%
+  credential_details.date_range: 0.0%
+  credential_details.drug_schedules: 0.0%
+  credential_details.expiration_date: 100.0%
+  credential_details.issue_date: 0.0%
+  credential_details.issuing_authority: 60.0%
+  credential_details.jurisdiction: 100.0%
+  credential_details.specialty: 0.0%
+  credential_details.status: 100.0%
+  credential_details.title: 0.0%
+  provider_info.name: 100.0%
+  provider_info.npi: 100.0%
+  provider_info.professional_designation: 80.0%
+
+Comparison to Sonnet Baseline (62.0%):
+  Haiku: 53.1%
+  Difference: -8.9 pp
+
+Result: Haiku significantly worse
+Recommendation: May need to stay with Sonnet
+
+Results saved to: C:\CREDENTIALMATE-REBUILD\credentialmate\credentialmate-app\haiku_5doc_test_results.json
+

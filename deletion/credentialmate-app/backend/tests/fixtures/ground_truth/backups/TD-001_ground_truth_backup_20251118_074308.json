@@ -1,0 +1,33 @@
+{
+  "data_id": "TD-001",
+  "file_path": "backend/uploads/2025/11/20251111_9f3c4096_CME 25hrs June 2025.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T10:00:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.90
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Michael Hilliard",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "UpToDate",
+      "certificate_number": "1266492503",
+      "credential_number": "1266492503",
+      "credits": 25.0,
+      "completion_date": "2025-06-07",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "UpToDate / Wolters Kluwer",
+      "additional_info": {
+        "cme_credits": 25.0,
+        "cme_category": "AMA PRA Category 1"
+      }
+    }
+  },
+  "notes": "Clear CME certificate from UpToDate with provider name, certificate number, credits (25.0), and completion date clearly visible. Good baseline test case."
+}

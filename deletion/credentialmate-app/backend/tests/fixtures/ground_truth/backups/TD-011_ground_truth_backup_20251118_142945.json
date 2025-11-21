@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-011",
+  "file_path": "backend/uploads/2025/11/FL - Presscribing contolled substances CME 2023.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:00:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": null,
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "Florida Prescribing Controlled Substances",
+      "certificate_number": null,
+      "credits": 2.0,
+      "completion_date": null,
+      "date_range": "2023",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "Florida Osteopathic Medical Association"
+    }
+  },
+  "notes": "State-mandated CME with AMA PRA Category 1 credits"
+}
