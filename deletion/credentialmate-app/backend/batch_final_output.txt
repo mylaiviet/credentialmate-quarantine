@@ -1,0 +1,187 @@
+2025-11-05 21:18:02,922 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+2025-11-05 21:18:02,923 INFO sqlalchemy.engine.Engine [raw sql] {}
+2025-11-05 21:18:02,930 INFO sqlalchemy.engine.Engine select current_schema()
+2025-11-05 21:18:02,930 INFO sqlalchemy.engine.Engine [raw sql] {}
+2025-11-05 21:18:02,935 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+2025-11-05 21:18:02,936 INFO sqlalchemy.engine.Engine [raw sql] {}
+2025-11-05 21:18:02,938 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:02,947 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2025-11-05 21:18:02,948 INFO sqlalchemy.engine.Engine [generated in 0.00079s] {'email_1': 'tricia.nguyen@example.com', 'param_1': 1}
+================================================================================
+BATCH CREDENTIAL UPLOAD
+================================================================================
+User ID: 7bdce44d-f0a1-4f32-b4b1-92666a2ce40b
+Documents directory: C:\Users\mylai\OneDrive - Delightful Healthcare\CredentialMate\.test_files
+Batch size: 5
+
+Total files found: 15
+
+Files to process: 15
+
+================================================================================
+BATCH 1/3 (5 documents)
+================================================================================
+
+[1/5] Processing: 20251029_DEA-Reg-Receipt_W25158913C_20251029-171419164.pdf
+--------------------------------------------------------------------------------
+2025-11-05 21:18:08,839 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:08,843 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:18:08,843 INFO sqlalchemy.engine.Engine [generated in 0.00103s] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:18:08,863 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (dea)
+
+[2/5] Processing: 20251030_DEA-Cert-223_FN6220975_20251104-032418553.pdf
+--------------------------------------------------------------------------------
+2025-11-05 21:18:16,120 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:16,121 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:18:16,122 INFO sqlalchemy.engine.Engine [cached since 7.28s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:18:16,126 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (dea)
+
+[3/5] Processing: 20251030_DEA-Cert-223_FN6220975_20251105-060535469.pdf
+--------------------------------------------------------------------------------
+2025-11-05 21:18:23,583 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:23,584 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:18:23,585 INFO sqlalchemy.engine.Engine [cached since 14.74s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:18:23,589 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (dea)
+
+[4/5] Processing: ABIM IM.png
+--------------------------------------------------------------------------------
+2025-11-05 21:18:32,459 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:32,463 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:18:32,463 INFO sqlalchemy.engine.Engine [cached since 23.62s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:18:32,468 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (board_certification)
+
+[5/5] Processing: BNDD.pdf
+--------------------------------------------------------------------------------
+2025-11-05 21:18:41,383 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:41,384 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:18:41,384 INFO sqlalchemy.engine.Engine [cached since 32.54s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:18:41,389 INFO sqlalchemy.engine.Engine COMMIT
+Single JSON parse failed, checking for multiple JSON objects: Extra data: line 27 column 1 (char 631)
+Document contains 3 CME activities, returning only the first one
+[OK] Stored in metadata (dea)
+
+================================================================================
+BATCH 1/3 COMPLETE
+================================================================================
+Success: 5/5
+Failures: 0/5
+Database: 0 licenses, 0 CME activities
+Metadata: 5 documents
+================================================================================
+
+[PAUSE]  Pausing 5 seconds before next batch...
+
+================================================================================
+BATCH 2/3 (5 documents)
+================================================================================
+
+[1/5] Processing: Continuing Medical Education (CME) _ ACP Online.pdf
+--------------------------------------------------------------------------------
+2025-11-05 21:18:57,008 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:57,016 INFO sqlalchemy.engine.Engine INSERT INTO cme_activities (id, user_id, title, provider, activity_type, category, credits, completion_date, state, certificate_url, notes, created_at, updated_at) VALUES (%(id)s::UUID, %(user_id)s::UUID, %(title)s, %(provider)s, %(activity_type)s, %(category)s, %(credits)s, %(completion_date)s, %(state)s, %(certificate_url)s, %(notes)s, %(created_at)s, %(updated_at)s)
+2025-11-05 21:18:57,016 INFO sqlalchemy.engine.Engine [generated in 0.00113s] {'id': UUID('93696c50-a086-428a-b46c-e4e9620511c4'), 'user_id': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'title': 'ACP Pain Management Module 7: Opioid Use Disorder', 'provider': 'American College of Physicians', 'activity_type': 'Online Course', 'category': 'General', 'credits': 5.0, 'completion_date': datetime.date(2025, 6, 16), 'state': None, 'certificate_url': None, 'notes': None, 'created_at': datetime.datetime(2025, 11, 6, 3, 18, 57, 15775), 'updated_at': datetime.datetime(2025, 11, 6, 3, 18, 57, 15775)}
+2025-11-05 21:18:57,029 INFO sqlalchemy.engine.Engine COMMIT
+2025-11-05 21:18:57,040 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:18:57,045 INFO sqlalchemy.engine.Engine SELECT cme_activities.id, cme_activities.user_id, cme_activities.title, cme_activities.provider, cme_activities.activity_type, cme_activities.category, cme_activities.credits, cme_activities.completion_date, cme_activities.state, cme_activities.certificate_url, cme_activities.notes, cme_activities.created_at, cme_activities.updated_at, cme_activities.cme_metadata 
+FROM cme_activities 
+WHERE cme_activities.id = %(pk_1)s::UUID
+2025-11-05 21:18:57,046 INFO sqlalchemy.engine.Engine [generated in 0.00080s] {'pk_1': UUID('93696c50-a086-428a-b46c-e4e9620511c4')}
+[OK] CME activity inserted (5.0 credits - ACP Pain Management Module 7: Opioid Use...)
+   Record ID: 93696c50-a086-428a-b46c-e4e9620511c4
+
+[2/5] Processing: Fellowship Cert.png
+--------------------------------------------------------------------------------
+2025-11-05 21:19:05,115 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:19:05,115 INFO sqlalchemy.engine.Engine [cached since 56.27s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:19:05,121 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (training)
+
+[3/5] Processing: Geriatric Board.png
+--------------------------------------------------------------------------------
+2025-11-05 21:19:14,163 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:19:14,164 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:19:14,165 INFO sqlalchemy.engine.Engine [cached since 65.32s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:19:14,168 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (board_certification)
+
+[4/5] Processing: Medical School.png
+--------------------------------------------------------------------------------
+2025-11-05 21:19:20,583 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:19:20,584 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:19:20,585 INFO sqlalchemy.engine.Engine [cached since 71.74s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:19:20,591 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (training)
+
+[5/5] Processing: Missouri Medical License.png
+--------------------------------------------------------------------------------
+[ERR] License insertion failed: 3 validation errors for LicenseCreate
+expiration_date
+  Input should be a valid date [type=date_type
+
+================================================================================
+BATCH 2/3 COMPLETE
+================================================================================
+Success: 4/5
+Failures: 1/5
+Database: 0 licenses, 1 CME activities
+Metadata: 3 documents
+================================================================================
+
+[PAUSE]  Pausing 5 seconds before next batch...
+
+================================================================================
+BATCH 3/3 (5 documents)
+================================================================================
+
+[1/5] Processing: Nguyen certificate UTHSC.pdf
+--------------------------------------------------------------------------------
+2025-11-05 21:19:39,060 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:19:39,061 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:19:39,061 INFO sqlalchemy.engine.Engine [cached since 90.22s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:19:39,066 INFO sqlalchemy.engine.Engine COMMIT
+[OK] Stored in metadata (training)
+
+[2/5] Processing: Residency and Internship.png
+--------------------------------------------------------------------------------
+2025-11-05 21:19:47,796 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-11-05 21:19:47,799 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.npi AS users_npi, users.email AS users_email, users.hashed_password AS users_hashed_password, users.first_name AS users_first_name, users.last_name AS users_last_name, users.role AS users_role, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.last_login AS users_last_login, users.user_metadata AS users_user_metadata 
+FROM users 
+WHERE users.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s
+2025-11-05 21:19:47,801 INFO sqlalchemy.engine.Engine [cached since 98.96s ago] {'id_1': UUID('7bdce44d-f0a1-4f32-b4b1-92666a2ce40b'), 'param_1': 1}
+2025-11-05 21:19:47,813 INFO sqlalchemy.engine.Engine COMMIT
+Image too large (10166032 bytes), compressing...

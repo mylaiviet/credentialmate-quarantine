@@ -1,0 +1,26 @@
+{
+  "data_id": "TD-005",
+  "file_path": "backend/uploads/2025/11/20251109_924a7d6f_ABIM IM.png",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T10:20:00Z",
+  "expected_classification": {
+    "document_type": "board_certification",
+    "database_table": "licenses",
+    "expected_category": "Board Certification",
+    "confidence_threshold": 0.92
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Tricia H. Nguyen",
+      "npi": null,
+      "professional_designation": "MD"
+    },
+    "credential_details": {
+      "title": "Diplomate of Internal Medicine",
+      "issuing_authority": "The American Board of Internal Medicine",
+      "specialty": "Internal Medicine",
+      "certification_status": "certified"
+    }
+  },
+  "notes": "American Board of Internal Medicine (ABIM) board certification certificate for Tricia H. Nguyen in Internal Medicine. Multiple signatures visible."
+}

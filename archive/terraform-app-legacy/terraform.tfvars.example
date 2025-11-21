@@ -1,0 +1,56 @@
+# ============================================
+# Terraform Variables - Example Configuration
+# CredentialMate Production Deployment
+# ============================================
+# INSTRUCTIONS:
+# 1. Copy this file to terraform.tfvars
+# 2. Replace all placeholder values with actual values
+# 3. NEVER commit terraform.tfvars to git
+# ============================================
+
+# AWS Configuration
+aws_region  = "us-east-1"
+environment = "production"
+
+# Network Configuration
+vpc_cidr             = "10.0.0.0/16"
+availability_zones   = ["us-east-1a", "us-east-1b"]
+public_subnet_cidrs  = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs = ["10.0.10.0/24", "10.0.11.0/24"]
+
+# EC2 Configuration
+ec2_instance_type = "t3.micro"
+ec2_key_name      = "" # Optional: SSH key name for emergency access
+
+# RDS Configuration
+db_instance_class           = "db.t4g.micro"
+db_name                     = "credentialmate"
+db_username                 = "credentialmate"
+db_password                 = "REPLACE_WITH_SECURE_PASSWORD_32_CHARS_MIN"
+db_allocated_storage        = 20
+db_max_allocated_storage    = 100
+db_backup_retention_period  = 35 # HIPAA requires 35+ days
+
+# Domain Configuration
+domain_name          = "credentialmate.com"
+create_route53_zone  = false # Set to true if creating new hosted zone
+
+# Application Secrets (get from .env file)
+app_secret_key = "REPLACE_WITH_SECRET_KEY_FROM_ENV"
+jwt_secret_key = "REPLACE_WITH_JWT_SECRET_FROM_ENV"
+encryption_key = "REPLACE_WITH_ENCRYPTION_KEY_FROM_ENV"
+
+# Monitoring Configuration
+enable_detailed_monitoring = true
+alarm_email                = "admin@credentialmate.com"
+
+# Cost Optimization
+enable_nat_gateway = true # Set to false to save $32/month (breaks outbound internet from RDS)
+
+# Additional Tags
+additional_tags = {
+  Project     = "CredentialMate"
+  Owner       = "Engineering"
+  CostCenter  = "Infrastructure"
+  Compliance  = "HIPAA"
+}

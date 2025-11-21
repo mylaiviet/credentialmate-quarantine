@@ -1,0 +1,31 @@
+{
+  "task_id": "APP-QUARANTINE-MOVE-2025-11",
+  "task_name": "Relocate Quarantine-Candidate Files from credentialmate-app",
+  "timestamp": "2025-11-21T04:43:50Z",
+  "source_repository": "credentialmate-app",
+  "destination_directory": "credentialmate-quarantine/deletion/credentialmate-app/",
+  "source_csv": "credentialmate-docs/ris_audits/app_repo_classification/app_repo_classification_v1.csv",
+  "total_moved": 239,
+  "total_not_found": 0,
+  "total_errors": 0,
+  "status": "success",
+  "bucket_breakdown": {
+    "questionable_tests": 238,
+    "temp_or_dev": 1
+  },
+  "artifacts": {
+    "manifest": "credentialmate-quarantine/deletion/credentialmate-app/app_quarantine_move_manifest.md",
+    "updated_csv": "credentialmate-docs/ris_audits/app_repo_classification/app_repo_classification_v1_with_moved.csv",
+    "ris_log": "credentialmate-quarantine/deletion/credentialmate-app/RIS_LOG_APP-QUARANTINE-MOVE-2025-11.json"
+  },
+  "verification": {
+    "core_files_touched": false,
+    "directory_structure_preserved": true,
+    "all_files_relocated": true
+  },
+  "soc2_compliance": {
+    "headers_applied": true,
+    "audit_trail": true,
+    "no_deletions": true
+  }
+}

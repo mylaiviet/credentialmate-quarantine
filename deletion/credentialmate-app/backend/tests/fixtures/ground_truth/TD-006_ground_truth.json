@@ -1,0 +1,25 @@
+{
+  "data_id": "TD-006",
+  "file_path": "backend/uploads/2025/11/20251109_a0b4d06a_Medical School.png",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T17:14:09.966230Z",
+  "expected_classification": {
+    "document_type": "diploma",
+    "database_table": "licenses",
+    "expected_category": "Medical Degree",
+    "confidence_threshold": 0.88
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Bs Tricia Huong Nguyen",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "degree": "Doctor of Medicine",
+      "issuing_authority": "University of Missouri",
+      "graduation_year": null
+    }
+  },
+  "notes": "University of Missouri medical school diploma. Text is partially visible but document type is clear from ornate diploma format and 'Doctor of Medicine' heading. | Option C fix: Model correctly extracted provider name that was marked null in GT"
+}

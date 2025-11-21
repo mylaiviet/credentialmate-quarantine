@@ -1,0 +1,26 @@
+{
+  "data_id": "TD-008",
+  "file_path": "backend/uploads/2025/11/20251113_24b51784_25 CMEs July 2023.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T10:35:00Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.9
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Michael Hilliard",
+      "npi": null
+    },
+    "credential_details": {
+      "title": "UpToDate",
+      "credits": 25.0,
+      "completion_date": "2023-07-01",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "UpToDate / Wolters Kluwer"
+    }
+  },
+  "notes": "Duplicate of TD-002 - tests duplicate detection for CME certificates."
+}

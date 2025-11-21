@@ -1,0 +1,34 @@
+{
+  "data_id": "TD-022",
+  "file_path": "backend/uploads/2025/11/nguyenD.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:11:00Z",
+  "expected_classification": {
+    "document_type": "dea",
+    "database_table": "licenses",
+    "expected_category": "DEA Registration",
+    "confidence_threshold": 0.95
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Tricia Nguyen",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "registration_number": "FN6220975",
+      "credential_number": "FN6220975",
+      "issue_date": "2025-10-30",
+      "expiration_date": "2028-10-31",
+      "drug_schedules": ["2", "2N", "3", "3N", "4", "5"],
+      "issuing_authority": "United States Department of Justice - Drug Enforcement Administration",
+      "additional_info": {
+        "drug_schedules": ["2", "2N", "3", "3N", "4", "5"],
+        "activity": "PRACTITIONER",
+        "address": "1000 CARONDELET DR, KANSAS CITY, MO 64114",
+        "fee_paid": "$888"
+      }
+    }
+  },
+  "notes": "DEA certificate for Tricia Nguyen (FN6220975, expires 10-31-2028). Clear DEA registration with all key fields visible: registration number, issue date, expiration date, schedules (2, 2N, 3, 3N, 4, 5), and business activity (PRACTITIONER). Correctly identified by pattern matching. Was mislabeled as 'other' (Session 1-3 correction)."
+}

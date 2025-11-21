@@ -1,0 +1,14 @@
+{
+  "data_id": "TD-023",
+  "file_path": "backend/uploads/2025/11/_FL CME Broker Instructions.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:12:00Z",
+  "expected_classification": {
+    "document_type": "other",
+    "database_table": null,
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": null,
+  "notes": "Tests rejection of instruction documents (not certificates)"
+}

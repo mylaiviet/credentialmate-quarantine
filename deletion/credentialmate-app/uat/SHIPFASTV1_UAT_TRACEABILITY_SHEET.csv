@@ -1,0 +1,66 @@
+TIMESTAMP,2025-11-16T06:30:00Z
+ORIGIN,credentialmate-app/uat
+UPDATED_FOR,phase5-step4-uat-support-pack
+
+Test Case ID,Feature,Route,User Role,Preconditions,Test Steps,Expected Output,Log Files to Check,SQL Validation Query,Success Criteria,Pass/Fail,Notes,Tester Name,Tester Date,Sign-Off
+TC-001-AUTH-LOGIN,Authentication,/auth/login,Public,Fresh browser session,1. Navigate to login page 2. Enter valid credentials (provider-001) 3. Click login,User redirected to /dashboard/v2/documents with valid session token,docker-compose logs backend | grep 'POST /auth/login',SELECT count(*) FROM user_sessions WHERE user_id='provider-001' AND expires_at > NOW();,Session created in DB + token returned + redirected to dashboard,PENDING,,Alice Chen,2025-11-16,
+TC-002-AUTH-LOGOUT,Authentication,/auth/logout,Provider,Valid session token,1. Click logout button 2. Verify redirect to login,User session invalidated + redirect to /,docker-compose logs backend | grep 'logout',SELECT count(*) FROM user_sessions WHERE user_id='provider-001' AND is_active=true;,Session marked inactive + token rejected on next request,PENDING,,Alice Chen,2025-11-16,
+TC-003-DOC-LIST-LOAD,Documents,/dashboard/v2/documents,Provider,User logged in,1. Navigate to documents page 2. Wait for list to load,Document list displays with 3+ sample documents from seed data,docker-compose logs backend | grep 'GET /api/v2/documents',SELECT count(*) FROM documents WHERE provider_id='provider-001';,List loads within 2s + shows all user's documents only,PENDING,,Alice Chen,2025-11-16,
+TC-004-DOC-UPLOAD,Documents,/dashboard/v2/documents,Provider,User logged in + file ready,1. Click Upload button 2. Select PDF file 3. Click confirm,Document appears in list with 'processing' status + UI feedback,docker-compose logs backend | grep 'POST /api/v2/documents/upload',SELECT status FROM documents WHERE provider_id='provider-001' ORDER BY created_at DESC LIMIT 1;,File stored + DB record created + status='processing',PENDING,,Alice Chen,2025-11-16,
+TC-005-DOC-DETAIL,Documents,/dashboard/v2/documents/[id],Provider,Document exists in DB,1. Click document in list 2. Wait for detail view,Detail page shows document title + metadata + parsing status,docker-compose logs backend | grep 'GET /api/v2/documents/',SELECT title FROM documents WHERE id='[doc-id]';,All metadata loads + no 404 errors,PENDING,,Alice Chen,2025-11-16,
+TC-006-DOC-DELETE,Documents,/dashboard/v2/documents/[id],Provider,Document exists + opened detail,1. Click delete button 2. Confirm deletion,Document removed from list + DB,docker-compose logs backend | grep 'DELETE /api/v2/documents',SELECT count(*) FROM documents WHERE id='[doc-id]';,Document marked deleted + RLS prevents other users seeing,PENDING,,Alice Chen,2025-11-16,
+TC-007-ADMIN-INGESTION,Admin Dashboard,/dashboard/v2/admin/ingestion,Admin,User logged in as admin,1. Navigate to ingestion admin 2. Wait for dashboard,Dashboard loads with ingestion stats/panels,docker-compose logs backend | grep 'GET /api/v2/admin/ingestion',SELECT count(*) FROM documents WHERE status='processing';,All panels render + no 500 errors,PENDING,,Bob Johnson,2025-11-16,
+TC-008-ADMIN-PROVIDER-LIST,Admin Dashboard,/dashboard/v2/admin/providers,Admin,User logged in as admin,1. Navigate to providers list 2. Wait for load,List shows all 3 seed providers,docker-compose logs backend | grep 'GET /api/v2/admin/providers',SELECT count(*) FROM providers;,Displays all providers + can filter/search,PENDING,,Bob Johnson,2025-11-16,
+TC-009-LICENSE-EXPIRY-FLAG,Compliance,/dashboard/v2/documents,Provider,Seed data includes expiring license,1. View documents 2. Check for expiry warning,UI shows warning if license expires within 30 days,docker-compose logs backend | grep 'expiry',SELECT expires_at FROM licenses WHERE provider_id='provider-001';,Warning badge appears + date accurate,PENDING,,Alice Chen,2025-11-16,
+TC-010-CME-CREDIT-TOTAL,Compliance,/dashboard/v2/documents,Provider,Seed data has CME records,1. View CME summary 2. Verify credit count,Total CME credits matches sum of all CME records,docker-compose logs backend | grep 'cme_credits',SELECT SUM(credits) FROM cme_events WHERE provider_id='provider-001';,Total displayed = DB sum + no rounding errors,PENDING,,Alice Chen,2025-11-16,
+TC-011-PROVIDER-RLS,Security,/api/v2/documents,Provider,Two providers logged in (separate sessions),1. Log in as provider-001 2. Fetch /api/v2/documents 3. Verify only provider-001 docs returned,Provider sees ONLY their own documents,docker-compose logs backend | grep 'RLS',SELECT count(*) FROM documents WHERE provider_id != SESSION_USER_ID;,Query returns 0 rows + RLS policy enforced,PENDING,,Bob Johnson,2025-11-16,
+TC-012-ADMIN-RLS,Security,/api/v2/admin/providers,Admin,Admin logged in,1. Admin fetches all providers 2. Admin cannot modify provider they don't own,Admin can see all providers but only modify own data,docker-compose logs backend | grep 'admin_role',SELECT * FROM role_permissions WHERE admin_role='true';,RLS allows admin view all + deny modify others,PENDING,,Bob Johnson,2025-11-16,
+TC-013-NOTIFICATION-ALERT,Notifications,/api/v2/notifications,Provider,Document processing complete,1. Upload document 2. Wait for parsing complete 3. Check notifications,User receives notification + email sent,docker-compose logs backend | grep 'notification',SELECT count(*) FROM notifications WHERE user_id='[user]';,Email in queue + notification created,PENDING,,Alice Chen,2025-11-16,
+TC-014-SCHEMA-MIGRATION,Database,n/a,DevOps,Fresh database,1. Run migrations 2. Verify schema applied,All tables exist with correct columns + types,docker-compose logs postgres | grep 'migration',\d+ from information_schema.columns WHERE table_schema='public';,No migration errors + schema matches code,PENDING,,DevOps,2025-11-16,
+TC-015-DATA-INTEGRITY,Database,n/a,QA,Seed data loaded,1. Run referential integrity check 2. Check for orphans,No orphaned records + all FKs valid,docker-compose logs backend | grep 'integrity',SELECT * FROM documents WHERE provider_id NOT IN (SELECT id FROM providers);,Query returns 0 rows + no constraint violations,PENDING,,Alice Chen,2025-11-16,
+TC-016-CACHE-SYNC,Performance,/dashboard/v2/documents,Provider,Document uploaded + cached,1. Upload doc 2. Verify appears in list 3. Delete doc 4. Verify cache invalidated,Cached data invalidated after delete + fresh fetch works,docker-compose logs redis,SELECT * FROM cache WHERE key LIKE 'doc:%';,Cache cleared + new data fetched,PENDING,,Alice Chen,2025-11-16,
+TC-017-CONCURRENT-UPLOAD,Data Integrity,/api/v2/documents/upload,Provider,Multiple upload clients ready,1. Upload same doc from 2 tabs simultaneously 2. Verify no duplicates,Only 1 document created + no race condition,docker-compose logs backend | grep 'conflict',SELECT count(*) FROM documents WHERE uploaded_file_path='[path]';,Exactly 1 record created + consistent state,PENDING,,Bob Johnson,2025-11-16,
+TC-018-PARSING-PDF,Parsing,/dashboard/v2/documents/[id],Provider,PDF uploaded,1. Upload PDF 2. Wait for parse 3. View extracted text,Text extracted from PDF visible in UI,docker-compose logs parsing_worker,SELECT extracted_text FROM document_parse_jobs WHERE document_id='[id]';,Parsing succeeds + text quality acceptable,PENDING,,Alice Chen,2025-11-16,
+TC-019-PARSING-LARGE-FILE,Parsing,/dashboard/v2/documents/upload,Provider,Large PDF ready (>20MB),1. Upload large PDF 2. Check parse status,Upload succeeds + parsing queued + no timeout,docker-compose logs parsing_worker | grep timeout,SELECT status FROM document_parse_jobs WHERE document_id='[id]' AFTER 60s;,Status not stuck + parsing progress visible,PENDING,,Bob Johnson,2025-11-16,
+TC-020-API-RATE-LIMIT,Performance,/api/v2/documents,Provider,API client ready,1. Make 100 requests in 1s 2. Check rate limit,Requests throttled after limit + 429 response,docker-compose logs backend | grep 'rate_limit',SELECT count(*) FROM rate_limit_logs WHERE user_id='provider-001' AND timestamp > NOW() - INTERVAL 1 MINUTE;,Rate limit enforced + no data loss,PENDING,,Bob Johnson,2025-11-16,
+
+---
+
+NOTES FOR TESTERS:
+
+1. FILL IN "Pass/Fail" WITH: PASS / FAIL / SKIPPED / BLOCKED
+2. IF FAIL: Note the issue type in "Notes" column (UI/API/Parsing/etc)
+3. SIGN OFF: Get tester name + date AFTER each test execution
+4. BLOCKED TESTS: Note which test is blocking + reference its bug report ID
+5. CSV IS CANONICAL: Sync this file with bug reports
+6. TIMESTAMP: Update TIMESTAMP field after each test cycle
+
+---
+
+VALIDATION CHECKS (Use these after all tests complete):
+
+-- Count total tests
+SELECT COUNT(*) FROM 'SHIPFASTV1_UAT_TRACEABILITY_SHEET.csv' WHERE Test_Case_ID != '';
+
+-- Count passes
+SELECT COUNT(*) FROM 'SHIPFASTV1_UAT_TRACEABILITY_SHEET.csv' WHERE Pass_Fail = 'PASS';
+
+-- Count failures
+SELECT COUNT(*) FROM 'SHIPFASTV1_UAT_TRACEABILITY_SHEET.csv' WHERE Pass_Fail = 'FAIL';
+
+-- Count blockers
+SELECT COUNT(*) FROM 'SHIPFASTV1_UAT_TRACEABILITY_SHEET.csv' WHERE Notes LIKE 'BLOCKED BY%';
+
+---
+
+PHASE 6 HANDOFF:
+1. Export this CSV
+2. Filter rows where Pass_Fail = 'FAIL'
+3. Cross-reference with SHIPFASTV1_UAT_ERROR_CLASSIFICATION_MATRIX.md
+4. Create Phase 6 fix tickets with BUG_REPORT references
+5. Assign to lanes (Backend/Frontend/Parsing/Security)
+
+---
+
+Last Updated: 2025-11-16
+Template Version: 1.0

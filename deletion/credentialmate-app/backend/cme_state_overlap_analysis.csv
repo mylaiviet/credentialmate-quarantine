@@ -1,0 +1,35 @@
+provider_name,email,total_licenses,all_license_states,states_with_specific_cme,specific_cme_states,total_cme_activities,total_cme_credits,state_requirements
+Andrew Martin,provider.multistate18@example.com,3,"AZ, MD, OH",3,"AZ, MD, OH",23,160.20000000000005,"AZ: Controlled Substances, Opioid, Pain Mgmt | MD: Cultural, Opioid | OH: Controlled Substances, Opioid, Pain Mgmt"
+Nicholas Arnold,provider.md14@example.com,7,"DE, IN, KS, MO, NE, OR, WY",3,"IN, NE, OR",6,1456.0,"IN:  | NE: Ethics | OR: Controlled Substances, Trafficking"
+Amanda Davis,provider.multistate11@example.com,6,"AZ, IN, MI, MO, NC, VA",3,"AZ, MO, VA",29,358.7999999999999,"AZ: Controlled Substances, Opioid, Pain Mgmt | MO: Controlled Substances, Ethics, Opioid | VA: Controlled Substances, Opioid, Trafficking"
+Lauren Harris,provider.multistate17@example.com,6,"AZ, CA, IL, IN, TN, TX",3,"IL, TN, TX",25,311.3999999999998,"IL: Cultural | TN: Controlled Substances, Opioid, Pain Mgmt | TX: Controlled Substances, Ethics, Trafficking"
+Jeffrey Lawrence,provider.md5@example.com,5,"MN, MO, NC, TN, TX",3,"MN, NC, TX",9,1440.0,MN:  | NC:  | TX: Opioid
+Matthew Moore,provider.multistate14@example.com,3,"FL, GA, MA",3,"FL, GA, MA",24,148.8,"FL:  | GA: Controlled Substances, Opioid, Pain Mgmt | MA: Cultural"
+Lisa Smith,provider.md6@example.com,6,"AL, CO, CT, IL, NJ, WV",3,"AL, CO, NJ",4,594.0,"AL:  | CO: Opioid, Pain Mgmt | NJ: "
+Lisa Anderson,provider.multistate7@example.com,4,"AK, MD, MI, SC",2,"MD, MI",20,198.0000000000001,"MD: Cultural, Opioid | MI: Ethics, Opioid, Pain Mgmt"
+Janet Williams,provider.md17@example.com,2,"AL, MI",2,"AL, MI",12,360.0,"AL: Opioid, Pain Mgmt | MI: Trafficking"
+Debra Gardner,provider.md4@example.com,2,"MD, MS",2,"MD, MS",12,216.0,"MD: Opioid, Pain Mgmt, Trafficking | MS: Controlled Substances, Trafficking"
+Sarah Mitchell,provider.multistate1@example.com,7,"KY, MO, NC, NE, SD, VT, WV",2,"MO, NC",25,372.40000000000003,"MO: Controlled Substances, Ethics, Opioid | NC: Controlled Substances"
+Michelle Ray,provider.md16@example.com,2,"CT, MS",2,"CT, MS",10,294.0,"CT: Opioid | MS: Cultural, Opioid"
+Jessica Wilson,provider.multistate13@example.com,2,"CA, WI",2,"CA, WI",20,86.6,"CA: Cultural, Pain Mgmt, Trafficking | WI: Controlled Substances, Opioid, Pain Mgmt"
+Jeremy Roberts,provider.do1@example.com,2,"MT, ND",2,"MT, ND",10,276.0,"MT: Ethics, Pain Mgmt | ND: Pain Mgmt"
+Lindsay Blair,provider.md12@example.com,1,SC,1,SC,6,26.0,SC: Ethics
+Mitchell Clark,provider.do5@example.com,1,AK,1,AK,6,69.0,AK: Pain Mgmt
+George Daniel,provider.do8@example.com,1,SD,1,SD,5,45.0,SD: Trafficking
+Maria Rodriguez,provider.multistate3@example.com,4,"LA, MN, OR, VA",1,VA,18,173.6,"VA: Controlled Substances, Opioid, Trafficking"
+Christopher Davis,provider.md10@example.com,1,ID,1,ID,10,69.0,"ID: Controlled Substances, Cultural, Pain Mgmt, Trafficking"
+Cynthia Diaz,provider.do4@example.com,1,WV,1,WV,2,24.0,WV: 
+Amanda Dudley,provider.md13@example.com,1,RI,1,RI,9,84.0,"RI: Cultural, Ethics"
+Anthony Gonzalez,provider.md3@example.com,1,HI,1,HI,5,69.0,"HI: Ethics, Trafficking"
+Christopher Hall,provider.do2@example.com,1,IL,1,IL,11,84.0,"IL: Controlled Substances, Ethics, Opioid, Pain Mgmt"
+Robert Johnson,provider.md1@example.com,1,GA,1,GA,11,62.0,GA: Opioid
+Joseph Zuniga,provider.do6@example.com,1,MN,1,MN,10,52.0,"MN: Opioid, Trafficking"
+Deborah Lynch,provider.do7@example.com,1,ME,1,ME,4,12.0,ME: 
+Maria Montgomery,provider.md15@example.com,1,CA,1,CA,11,99.0,"CA: Controlled Substances, Pain Mgmt, Trafficking"
+Matthew Moore,provider.md8@example.com,1,NV,1,NV,9,29.0,"NV: Controlled Substances, Trafficking"
+Melanie Munoz,provider.md11@example.com,1,DE,1,DE,8,72.0,"DE: Ethics, Opioid, Pain Mgmt, Trafficking"
+Craig Ramirez,provider.do3@example.com,1,LA,1,LA,10,61.0,"LA: Opioid, Pain Mgmt"
+Susan Rogers,provider.md9@example.com,2,"TX, WA",1,WA,8,200.0,WA: Opioid
+Emily Taylor,provider.multistate9@example.com,4,"DE, ND, NY, RI",1,NY,17,142.00000000000003,"NY: Cultural, Pain Mgmt"
+Jeffery Wagner,provider.md2@example.com,1,UT,1,UT,3,34.0,UT: Ethics
+Linda Wolfe,provider.md7@example.com,1,VT,1,VT,7,66.0,VT: Cultural

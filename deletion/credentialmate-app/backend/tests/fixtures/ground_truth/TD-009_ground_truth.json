@@ -1,0 +1,23 @@
+{
+  "data_id": "TD-009",
+  "file_path": "backend/uploads/2025/11/20251113_35fc8cd6_NetCE(3).png",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:29:45.981387Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Ashok Sehgal",
+      "npi": null
+    },
+    "credential_details": {
+      "issuing_authority": "NetCE",
+      "category": "CME/CE"
+    }
+  },
+  "notes": "NetCE continuing education certificate (PNG format). Specific details may vary - lower confidence due to image quality. | Session 1-12 ground truth fix: Updated 1 null fields to actual extracted values"
+}

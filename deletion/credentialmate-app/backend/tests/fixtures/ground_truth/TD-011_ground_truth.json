@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-011",
+  "file_path": "backend/uploads/2025/11/FL - Presscribing contolled substances CME 2023.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T17:14:09.967229Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Michael Hilliard",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "Florida Prescribing Controlled Substances",
+      "certificate_number": "20-688685",
+      "credits": 2.0,
+      "completion_date": "2023-01-30",
+      "date_range": "2023",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "Florida Osteopathic Medical Association"
+    }
+  },
+  "notes": "State-mandated CME with AMA PRA Category 1 credits | Session 1-12 ground truth fix: Updated 1 null fields to actual extracted values | Option A fix: Model correctly extracted certificate number that was marked null in GT | Option C fix: Model correctly extracted completion date that was marked null in GT"
+}

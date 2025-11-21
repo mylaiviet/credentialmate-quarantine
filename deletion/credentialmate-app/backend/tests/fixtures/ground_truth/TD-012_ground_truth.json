@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-012",
+  "file_path": "backend/uploads/2025/11/PA Child abuse CME 2022.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T16:20:10.940159Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Michael Wayne Hilliard",
+      "npi": null,
+      "professional_designation": "MD"
+    },
+    "credential_details": {
+      "title": "Child Abuse Identification and Reporting: The Pennsylvania Requirement",
+      "certificate_number": "#97542",
+      "credits": 3.0,
+      "completion_date": "2022-12-14",
+      "date_range": "2022",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "NetCE"
+    }
+  },
+  "notes": "State-mandated CME with AMA PRA Category 1 credits | Session 1-12: Fixed null fields to actual values | Option A fix: Updated issuing authority from state name to actual issuing organization"
+}

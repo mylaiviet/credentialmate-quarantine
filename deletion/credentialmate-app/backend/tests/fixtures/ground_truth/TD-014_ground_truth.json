@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-014",
+  "file_path": "backend/uploads/2025/11/certificate-1157737702.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:31:05.456060Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.9
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Michael Hilliard",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "UpToDate",
+      "certificate_number": "1157737702",
+      "credits": 10.0,
+      "completion_date": "2024-05-29",
+      "date_range": "2024-05-29 to 2024-05-29",
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "UpToDate / Wolters Kluwer"
+    }
+  },
+  "notes": "Additional UpToDate certificate for consistency testing | Session 1-12 final fix: Updated 4 null fields"
+}

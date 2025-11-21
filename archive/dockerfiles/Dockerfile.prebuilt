@@ -1,0 +1,25 @@
+# ============================================================================
+# CredentialMate Frontend - Prebuilt Production Dockerfile
+# ============================================================================
+# This Dockerfile uses a pre-built .next folder from local build
+# Much faster than building on server (avoids memory/cpu constraints)
+# ============================================================================
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy only the necessary files (no source, no node_modules needed for build)
+COPY .next ./.next
+COPY public ./public
+COPY package*.json ./
+COPY next.config.js ./
+
+# Install only production dependencies (minimal)
+RUN npm ci --only=production
+
+# Expose port 3000 (Next.js default)
+EXPOSE 3000
+
+# Start the Next.js production server
+CMD ["npm", "start"]

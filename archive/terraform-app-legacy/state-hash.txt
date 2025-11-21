@@ -1,0 +1,11 @@
+# Terraform State File Hash
+# Generated: 2024-11-20
+
+File: credentialmate-app/terraform/terraform.tfstate
+Algorithm: SHA256
+Hash: 9f9a75bca8c9a559270a333d35da0e4d8641d6910015b529a23c1f82367e9d20
+
+# Verification command:
+# certutil -hashfile terraform.tfstate SHA256
+# or on Linux/Mac:
+# sha256sum terraform.tfstate

@@ -1,0 +1,23 @@
+{
+  "data_id": "TD-010",
+  "file_path": "backend/uploads/2025/11/20251113_42063a54_WillsEye Hospital(5).png",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T14:29:45.982438Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.9
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Md Ashok Sehgal",
+      "npi": null
+    },
+    "credential_details": {
+      "issuing_authority": "Wills Eye Hospital",
+      "program_type": "training"
+    }
+  },
+  "notes": "Wills Eye Hospital CME certificate with 8.50 AMA PRA Category I Credits. Confirmed as CME, not training certificate (Session 1-3 correction). | Session 1-12 ground truth fix: Updated 1 null fields to actual extracted values"
+}

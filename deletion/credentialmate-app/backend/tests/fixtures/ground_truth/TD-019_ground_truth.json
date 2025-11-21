@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-019",
+  "file_path": "backend/uploads/2025/11/20251117_4433bf00_NetCE(2).png",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T17:14:09.970369Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "Ashok Sehgal 19410",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "Mental Health Issues Common to Veterans and Their Families",
+      "certificate_number": "#96342",
+      "credits": 2.0,
+      "completion_date": "2025-05-09",
+      "date_range": null,
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "NetCE"
+    }
+  },
+  "notes": "Additional NetCE format for provider consistency | Option A fix: Model correctly extracted certificate number that was marked null in GT | Option C fix: Model correctly extracted provider name, credits, and completion date that were marked null in GT"
+}

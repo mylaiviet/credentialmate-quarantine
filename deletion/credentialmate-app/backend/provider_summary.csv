@@ -1,0 +1,53 @@
+user_id,email,first_name,last_name,npi,role,is_active,is_verified,user_created_at,last_login,license_count,cme_count,document_count,license_states,total_cme_credits
+555e92b0-7a69-4cb7-829c-3b48968983cc,admin@blueshift.com,BlueShift,Administrator,,admin,True,True,2024-03-10T03:37:10.037751,2025-11-18T03:37:10.037773,0,0,0,,0.0
+139134ac-cd33-46e6-a69a-31ac6170af01,provider.multistate7@example.com,Lisa,Anderson,,provider,True,True,2024-12-07T03:58:02.223853,2025-11-03T03:58:02.223855,4,20,0,"AK, MD, MI, SC",198.0000000000001
+2e6a2704-7ddf-4ece-a6de-ef9440df1ed2,provider.md14@example.com,Nicholas,Arnold,<memory at 0x704630fe34c0>,provider,True,True,2024-06-11T03:37:14.953124,2025-11-12T03:37:14.953134,7,6,13,"DE, IN, KS, MO, NE, OR, WY",1456.0
+66d8c077-731d-4adc-8400-34eb141de0af,provider.md12@example.com,Lindsay,Blair,<memory at 0x704630fe3580>,provider,True,True,2023-03-13T03:37:14.562867,2025-11-19T03:49:44.568933,1,6,2,SC,26.0
+6f037392-09a1-4fc9-b00f-410425cb99fe,provider.multistate10@example.com,Daniel,Brown,,provider,True,True,2024-06-15T03:58:02.237211,2025-10-22T03:58:02.237213,6,12,0,"FL, ID, IL, OH, VA, WI",182.40000000000003
+2326cec7-7c1e-424f-bf3e-aefb195a7cca,provider.multistate2@example.com,David,Chen,,provider,True,True,2024-10-25T03:58:02.197313,2025-10-28T03:58:02.197315,5,12,0,"HI, MT, NM, UT, WY",149.50000000000003
+ae0ea300-d1d6-48a1-a5d8-00c8f2d4d17f,provider.multistate20@example.com,Brandon,Clark,,provider,True,True,2024-02-29T03:58:02.285412,2025-11-08T03:58:02.285414,4,12,0,"GA, MO, VA, WI",115.20000000000003
+d6b6bc0c-159f-45d4-969d-2d415aa43822,provider.do5@example.com,Mitchell,Clark,<memory at 0x704630fe3880>,provider,True,True,2024-09-14T03:37:16.507413,2025-10-23T03:37:16.507453,1,6,3,AK,69.0
+72316753-a4be-4516-b3ec-b88ed0d57347,provider.do8@example.com,George,Daniel,<memory at 0x704630fe3940>,provider,True,True,2024-10-23T03:37:17.091387,2025-11-13T03:37:17.091397,1,5,3,SD,45.0
+10c49ff8-0789-477c-86d4-bb00b95ab234,provider.multistate11@example.com,Amanda,Davis,,provider,True,True,2025-05-20T03:58:02.241753,2025-11-16T03:58:02.241755,6,29,0,"AZ, IN, MI, MO, NC, VA",358.7999999999999
+f694a288-0c84-4a49-a915-6187c78e8a14,provider.md10@example.com,Christopher,Davis,<memory at 0x704630fe3a00>,provider,True,True,2024-12-12T03:37:14.189068,2025-11-15T03:37:14.189078,1,10,3,ID,69.0
+8763c842-5104-4c6b-aad3-1bcb7004317a,provider.do4@example.com,Cynthia,Diaz,<memory at 0x704630fe3ac0>,provider,True,True,2024-03-29T03:37:16.311326,2025-11-05T03:37:16.311338,1,2,3,WV,24.0
+e61234f3-509c-4d22-a5e6-cb75985f8c1b,provider.md13@example.com,Amanda,Dudley,<memory at 0x704630fe3b80>,provider,True,True,2023-05-19T03:37:14.755925,2025-10-30T03:37:14.755937,1,9,3,RI,84.0
+145a7c8f-65f6-4b05-9a18-235932b8f211,provider.multistate12@example.com,Christopher,Garcia,,provider,True,True,2025-01-23T03:58:02.246093,2025-11-10T03:58:02.246094,4,15,0,"AZ, NJ, PA, VA",100.79999999999997
+3266d4b9-1e60-46e8-ae6c-3b5f34098bda,provider.md4@example.com,Debra,Gardner,<memory at 0x704630fe3c40>,provider,True,True,2024-09-28T03:37:11.979518,2025-11-08T03:37:11.979558,2,12,3,"MD, MS",216.0
+9a70ee47-4267-478f-a57c-16b5f595a709,provider.md3@example.com,Anthony,Gonzalez,<memory at 0x704630fe3d00>,provider,True,True,2023-08-11T03:37:11.782519,2025-10-23T03:37:11.782530,1,5,3,HI,69.0
+674bff81-ae9e-4fa0-9694-a0ccbeed571c,provider.do2@example.com,Christopher,Hall,<memory at 0x704630fe3dc0>,provider,True,True,2023-06-07T03:37:15.928693,2025-11-03T03:37:15.928704,1,11,2,IL,84.0
+85a2246b-c66b-4d60-9b60-3bef2fd0a1cf,provider.multistate17@example.com,Lauren,Harris,,provider,True,True,2023-12-31T03:58:02.270438,2025-10-29T03:58:02.270441,6,25,0,"AZ, CA, IL, IN, TN, TX",311.3999999999998
+8bcf8670-2b70-4178-9ef5-4929e4c0b96a,provider.multistate15@example.com,Ashley,Jackson,,provider,True,True,2025-01-24T03:58:02.260707,2025-10-20T03:58:02.260709,5,12,0,"IN, MO, TN, VA, WA",130.99999999999997
+1075e199-d4a7-4e84-9179-8d969996c198,delegate1@credentialmate.com,Danielle,Johnson,,delegate,True,True,2025-05-29T03:37:10.626029,2025-11-11T03:37:10.626042,0,0,0,,0.0
+3b131fce-d6ca-4e19-a2b7-19fa1aca9baa,provider.md1@example.com,Robert,Johnson,<memory at 0x704630fe3e80>,provider,True,True,2024-12-28T03:37:11.403138,2025-11-05T03:37:11.403150,1,11,2,GA,62.0
+7adfd06b-ef6b-496a-82d7-6e60caa793fc,provider.md5@example.com,Jeffrey,Lawrence,<memory at 0x704630fe3f40>,provider,True,True,2024-01-27T03:37:12.175910,2025-11-09T03:37:12.175921,5,9,8,"MN, MO, NC, TN, TX",1440.0
+4a56b754-ba1d-4887-98ff-ed901688310c,provider.multistate5@example.com,Jennifer,Lee,,provider,True,True,2023-12-07T03:58:02.215115,2025-11-02T03:58:02.215117,7,15,0,"AR, AZ, CO, MA, ME, MS, PA",237.30000000000018
+4f22db35-deae-4403-88ed-b517c8d063d2,provider.do7@example.com,Deborah,Lynch,<memory at 0x7046308b0040>,provider,True,True,2024-09-18T03:37:16.896101,2025-11-17T03:37:16.896112,1,4,1,ME,12.0
+57363126-3a3f-4da4-be1a-bd14ed520dd3,provider.multistate18@example.com,Andrew,Martin,,provider,True,True,2025-01-27T03:58:02.274964,2025-10-31T03:58:02.274965,3,23,0,"AZ, MD, OH",160.20000000000005
+185350dd-85d5-41d1-9001-aa65c6015409,provider.multistate8@example.com,Robert,Martinez,,provider,True,True,2022-12-18T03:58:02.227917,2025-10-21T03:58:02.227919,6,12,0,"AL, CT, GA, IA, IN, NJ",176.99999999999997
+b8f30691-2d18-4add-bee3-367020a3437c,delegate4@credentialmate.com,Patricia,Miller,,delegate,True,True,2025-05-10T03:37:11.208258,2025-11-09T03:37:11.208270,0,0,0,,0.0
+fa59c386-dbb7-4a6b-893e-6154cb626056,provider.multistate1@example.com,Sarah,Mitchell,,provider,True,True,2023-10-23T03:58:02.136440,2025-10-26T03:58:02.136447,7,25,0,"KY, MO, NC, NE, SD, VT, WV",372.40000000000003
+a1d94598-df18-4897-9311-a777533da27c,provider.md15@example.com,Maria,Montgomery,<memory at 0x7046308b0100>,provider,True,True,2022-12-10T03:37:15.147941,2025-10-30T03:37:15.147952,1,11,3,CA,99.0
+26065ac9-f6dd-4607-86d1-50ad72d210cf,provider.md8@example.com,Matthew,Moore,<memory at 0x7046308b01c0>,provider,True,True,2024-01-12T03:37:13.800307,2025-11-06T03:37:13.800320,1,9,1,NV,29.0
+accbf163-20e8-4cd6-ab15-e17225c4e86f,provider.multistate14@example.com,Matthew,Moore,,provider,True,True,2024-05-19T03:58:02.255919,2025-11-08T03:58:02.255922,3,24,0,"FL, GA, MA",148.8
+3284c238-2617-496d-b711-efb1699caa5c,provider.md11@example.com,Melanie,Munoz,<memory at 0x7046308b0280>,provider,True,True,2024-08-19T03:37:14.370508,2025-10-31T03:37:14.370518,1,8,3,DE,72.0
+1b3edd84-e3cc-442d-92c7-79ea86c40737,compliance@blueshift.com,Compliance,Officer,,admin,True,True,2024-04-15T03:37:10.230743,2025-11-14T03:37:10.230776,0,0,0,,0.0
+e6cc3f67-a3e9-4ec0-b12f-91e68879a826,provider.do3@example.com,Craig,Ramirez,<memory at 0x7046308b0340>,provider,True,True,2025-02-22T03:37:16.118057,2025-11-07T03:37:16.118066,1,10,1,LA,61.0
+c67d6e03-3bd1-491d-baf7-013cc4fd0a1b,provider.md16@example.com,Michelle,Ray,<memory at 0x7046308b0400>,provider,True,True,2024-04-07T03:37:15.340409,2025-10-21T03:37:15.340420,2,10,3,"CT, MS",294.0
+b2c0ff18-ee69-4ad1-8beb-60da720a6702,delegate3@credentialmate.com,Jill,Rhodes,,delegate,True,True,2025-02-16T03:37:11.014341,2025-11-09T03:37:11.014353,0,0,0,,0.0
+88f6d03a-79a6-403f-a4d4-41c970254a57,provider.do1@example.com,Jeremy,Roberts,<memory at 0x7046308b04c0>,provider,True,True,2024-08-27T03:37:15.734297,2025-10-24T03:37:15.734308,2,10,3,"MT, ND",276.0
+5cceced5-cde2-424b-84ac-9ff26f1e06f6,provider.multistate3@example.com,Maria,Rodriguez,,provider,True,True,2023-07-17T03:58:02.206497,2025-10-23T03:58:02.206499,4,18,0,"LA, MN, OR, VA",173.6
+c5a4c0d9-24a9-4717-8d6d-be4442bf0084,provider.md9@example.com,Susan,Rogers,<memory at 0x7046308b0580>,provider,True,True,2025-02-07T03:37:13.999306,2025-11-09T03:37:13.999317,2,8,5,"TX, WA",200.0
+c266125f-2cd5-4996-99e5-ab572dedc12e,provider.md6@example.com,Lisa,Smith,<memory at 0x7046308b0640>,provider,True,True,2025-01-14T03:37:12.373652,2025-11-13T03:37:12.373664,6,4,11,"AL, CO, CT, IL, NJ, WV",594.0
+b6da3cc0-e04d-40f2-a66a-ae2d1d34a4f3,support@blueshift.com,Support,Specialist,,admin,True,True,2025-03-20T03:37:10.425339,2025-11-12T03:37:10.425358,0,0,0,,0.0
+6e49c92c-c537-407b-9b9b-a2dd9508f60b,provider.multistate9@example.com,Emily,Taylor,,provider,True,True,2024-06-28T03:58:02.233326,2025-11-08T03:58:02.233327,4,17,0,"DE, ND, NY, RI",142.00000000000003
+24ee2083-87ec-4360-96db-cbd86ceeaa30,provider.multistate4@example.com,James,Thompson,,provider,True,True,2023-08-28T03:58:02.210663,2025-10-28T03:58:02.210665,4,13,0,"CA, NV, TN, WA",82.0
+1631742a-7a95-43fa-8127-e90544f8fa95,provider.multistate19@example.com,Rachel,Thompson,,provider,True,True,2025-04-20T03:58:02.280368,2025-10-25T03:58:02.280370,5,12,0,"NJ, NY, TN, VA, WI",144.00000000000006
+1839a55e-e919-4eba-bd15-f823c2fb760f,provider.md2@example.com,Jeffery,Wagner,<memory at 0x7046308b0700>,provider,True,True,2024-11-24T03:37:11.588587,2025-10-22T03:37:11.588596,1,3,2,UT,34.0
+f7c922de-dee3-43b2-8c8d-fb26fd1273ad,delegate2@credentialmate.com,Joshua,Walker,,delegate,True,True,2025-06-16T03:37:10.821708,2025-11-16T03:37:10.821719,0,0,0,,0.0
+561494fb-1235-4f1d-94dd-b7db3e05e4b6,provider.multistate16@example.com,Joshua,White,,provider,True,True,2023-05-10T03:58:02.266072,2025-11-16T03:58:02.266074,5,14,0,"AZ, MA, NC, NJ, NY",154.99999999999997
+a487b787-053e-4ebc-81ca-f1d89435208e,provider.md17@example.com,Janet,Williams,<memory at 0x7046308b07c0>,provider,True,True,2024-08-05T03:37:15.538829,2025-11-16T03:37:15.538839,2,12,4,"AL, MI",360.0
+c068655d-23d3-4cb0-bac1-ef53b8f72d26,provider.multistate6@example.com,Michael,Williams,,provider,True,True,2023-11-05T03:58:02.219617,2025-11-04T03:58:02.219619,5,10,0,"IL, KS, NH, OK, TX",113.49999999999997
+56647db3-a328-425f-a745-3f34e3d258f9,provider.multistate13@example.com,Jessica,Wilson,,provider,True,True,2022-11-21T03:58:02.251747,2025-11-06T03:58:02.251748,2,20,0,"CA, WI",86.6
+7001f867-43bf-425d-a6b9-a8cfc6ca05d4,provider.md7@example.com,Linda,Wolfe,<memory at 0x7046308b0880>,provider,True,True,2023-01-30T03:37:13.065144,2025-11-12T03:37:13.065156,1,7,3,VT,66.0
+5864f73d-8633-4197-8b83-bfc207005736,provider.do6@example.com,Joseph,Zuniga,<memory at 0x7046308b0940>,provider,True,True,2025-04-23T03:37:16.700284,2025-11-18T03:37:16.700294,1,10,2,MN,52.0

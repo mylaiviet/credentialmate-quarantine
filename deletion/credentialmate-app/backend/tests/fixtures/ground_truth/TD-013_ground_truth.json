@@ -1,0 +1,29 @@
+{
+  "data_id": "TD-013",
+  "file_path": "backend/uploads/2025/11/Implicit bias CMW.pdf",
+  "human_validated_by": "PM",
+  "human_validated_at": "2025-11-18T17:14:09.969229Z",
+  "expected_classification": {
+    "document_type": "cme",
+    "database_table": "cmeactivities",
+    "expected_category": null,
+    "confidence_threshold": 0.85
+  },
+  "expected_extraction": {
+    "provider_info": {
+      "name": "michael hilliard",
+      "npi": null,
+      "professional_designation": null
+    },
+    "credential_details": {
+      "title": "Implicit Bias Training",
+      "certificate_number": "100047683",
+      "credits": 1.0,
+      "completion_date": "2019-10-01",
+      "date_range": null,
+      "category": "AMA PRA Category 1",
+      "issuing_authority": "Quality Interactions and Amedco LLC"
+    }
+  },
+  "notes": "Tests CME recognition for newer required topics | Session 1-12 final fix: Updated 3 null fields | Option C fix: Model correctly extracted certificate number that was marked null in GT"
+}
